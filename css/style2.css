@@ -1,0 +1,386 @@
+/*fonts*/
+
+
+html {
+    font-size: 10px;
+}
+
+
+/*  navbar */
+
+.navbar {
+    display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    width:100%;
+    padding: 1.4rem 5rem;
+    box-shadow: 2px 2px 4px 2px #b3b0b0;
+    border-bottom: 1px solid rgba(255,255,255,.3);
+    background-color: #fff;
+    align-items: baseline;
+    -webkit-box-align: baseline;
+    -webkit-align-items: baseline;
+    -ms-flex-align: baseline;
+    justify-content: space-between;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    margin-bottom: 0;
+}
+
+.navbar_fixed-top {
+    position: fixed;
+    top:0;
+    left:0;
+}
+.navbar__item_left {
+  margin-right: 3.3rem;
+}
+
+.navbar__item_right {
+    margin-left: 3.3rem;
+}
+
+.navbar__image {
+    width: 12rem;
+}
+.navbar__list {
+    width: 94rem;
+}
+
+/* list */
+
+.list {
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 1.4rem;
+    list-style-type: none;
+
+}
+.list__item {
+    color:#b0afab;
+    margin: 0 1.8rem;
+
+}
+
+.list__item:last-child {
+    margin-right: 0;
+}
+
+.list__item-link {
+    color:inherit;
+}
+
+.list__item-link:hover{
+    text-decoration: none;
+    color:#49453c;
+}
+
+.list__item:hover {
+    color:#49453c;
+}
+
+.list__item_active {
+   color:#49453c;
+}
+
+.list__item-underline {
+    opacity: 0;
+    margin: 0 auto;
+    height:2px;
+    background-color: #e6b82e;
+    width: 90%;
+
+}
+
+.list__item:hover  .list__item-underline,
+.list__item_active .list__item-underline {
+    opacity: 1;
+}
+
+
+/* button */
+
+.btn {
+    font-size: 1rem;
+    border: 1px solid #000000;
+    border-radius: 1.45rem;
+    padding:0.72rem 1.7rem;
+    line-height: 1.4;
+}
+
+
+.btn_yellow {
+    border-color: #e6b82e;
+    background-color: #e6b82e;
+    color: #fff;
+}
+
+.btn_yellow-brd {
+    border-color: #e6b82e;
+    color: #fff;
+}
+
+.btn_yellow:hover,
+.btn_yellow-brd:hover {
+    color: #fff;
+}
+
+
+.btn_white {
+    border-color: #fff;
+    background-color: #fff;
+    color: #000;
+}
+
+.btn_white:hover {
+    color: #000;
+}
+
+/* section */
+
+.section {
+    display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    width:100%;
+    padding: 6rem 0;
+    background-color: #fff;
+    align-items: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    justify-content: space-between;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    flex-direction: column;
+}
+
+.section__content {
+    width: 94rem;
+}
+
+.section__content_collapse {
+    width:100%;
+}
+
+/*intro*/
+
+.intro {
+    height: 35rem;
+    background-color: #e6b82e;
+    position: relative;
+}
+
+
+.intro__text-block {
+    display: block;
+    position: absolute;
+    width: 24.8rem;
+    color: #fff;
+    left:3.1rem;
+}
+
+.intro__text-block_head  {
+    font-size: 2.3rem;
+    font-weight: 600;
+    left:3.1rem;
+    top: 5.4rem;
+}
+
+.intro__text-block_sub-head  {
+    font-size: 1.73rem;
+    top:16rem;
+}
+
+.intro__image-block {
+    height:100%;
+    float: right;
+    width:65%;
+    background-image: url("../img/intro/0011.png");
+    background-size: contain;
+}
+
+.intro__button{
+    left:3.1rem;
+    top: 22rem;
+    position: absolute;
+    padding: 0.72rem 3.3rem;
+}
+
+/* skills*/
+.skills {
+   width:84%;
+   border:1px solid #e6b82e;
+   display: flex;
+   display: -webkit-box;
+   display: -webkit-flex;
+   display: -ms-flexbox;
+   margin:6.6rem  auto;
+   padding: 1.6rem 3.1rem;
+   background-color: #fff;
+   align-items: center;
+   -webkit-box-align: center;
+   -webkit-align-items: center;
+   -ms-flex-align: center;
+   justify-content: space-between;
+   -webkit-box-pack: justify;
+   -webkit-justify-content: space-between;
+   -ms-flex-pack: justify;
+}
+
+.skills__item {
+    width: 23rem;
+}
+
+.skills_text {
+    display: inline-block;
+    width:16.4rem;
+    font-size: 1.1rem;
+    line-height:1.8;
+}
+.skills__icon {
+    display: inline-block;
+    width: 3.3rem;
+    height:3.3rem;
+    margin-right: 1.2rem;
+    vertical-align: text-bottom;
+
+}
+
+/* icons*/
+
+.icon-time {
+    background-image: url("../img/intro/Icon 1.png");
+    background-size:cover;
+}
+.icon-tool {
+    background-image: url("../img/intro/Icon 3.png");
+    background-size:cover;
+    width:4.1rem;
+}
+
+.icon-five {
+    background-image: url("../img/intro/Icon 2.png");
+    background-size:cover;
+}
+
+/* projects */
+
+.projects__header {
+    display: inline-block;
+    font-size: 7.2rem;
+    font-weight: 400;
+    margin-left: -3px;
+}
+
+.projects__sub-header {
+    display: inline-block;
+    font-size: 1.5rem;
+    width: 66rem;
+}
+
+.projects__preview {
+    margin-top: 3rem;
+}
+
+.projects__row {
+    display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    align-items: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    justify-content: space-between;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    margin-top: 2.3rem;
+}
+.projects__row:first-child {
+    margin-top: 0;
+}
+.projects__preview-item {
+    width:30rem;
+    height:30rem;
+    position: relative;
+}
+
+.projects__preview-img {
+    width: 100%;
+}
+
+.projects__preview-shade {
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.projects__preview-item:hover > .projects__preview-shade {
+    opacity:1;
+}
+
+.projects__preview-btn {
+    margin-top: 1.5rem;
+    font-size: 1.4rem;
+    padding: 0.5rem 2.9rem;
+}
+
+.projects__preview-text {
+    margin: 9rem auto 0;
+    font-weight: 600;
+    color:#fff;
+    font-size: 2.6rem;
+    display: block;
+    text-align: center;
+}
+
+.projects__preview-text::before {
+    content: '<<';
+    font-size: 1.5rem;
+}
+.projects__preview-text::after {
+    content: '>>';
+    font-size: 1.5rem;
+}
+
+.projects__btn-group{
+    text-align: center;
+    margin-top: 2.8rem;
+}
+
+.projects__catalog-btn {
+    font-size: 1.4rem;
+    padding: 0.5rem 3.6rem;
+    color:#000;
+}
+
+.projects__catalog-btn:hover {
+    color: #000;
+}
+
+/* materials */
+
+/* wood */
+
+.wood {
+    float:right;
+    background-image: url("../img/materials/wood.png");
+    height:67rem;
+    width:38.1rem;
+    background-size: cover;
+}
