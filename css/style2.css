@@ -626,7 +626,63 @@ html {
     display:block;
 }
 
+/* history */
+
+.history {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack:start;
+    -ms-flex-pack:start;
+    justify-content:flex-start;
+    margin-top: 4.3rem;
+    flex-direction: column;
+    min-height: 55rem;
+    position:relative;
+}
+
+.history__header {
+    font-size: 7.2rem;
+    width:3.28rem;
+    margin-top: 4.8rem;
+    font-style: italic;
+    line-height: 1;
+    color:#fff;
+}
+
+.history__sub-header {
+    display: block;
+    font-size: 1.5rem;
+    width: 59rem;
+    margin-top: 2.2rem;
+    line-height: 1.5;
+    text-transform: uppercase;
+    color:#fff;
+}
+
+.history__info-block {
+    margin-top: 3.4rem;
+    width: 33.5rem;
+    height: 15.4rem;
+    background-color: #fff;
+    padding: 1.4rem 2.4rem;
+}
+
+.history__info-text {
+    font-size: 1.4rem;
+    color:#000;
+}
+
 /* wood */
+
+.backgrounded {
+    background-image: url("../img/history/Pic_1.png");
+    background-size: cover;
+    min-height: 64.8rem;
+}
 
 .wood {
     position: absolute;
