@@ -222,6 +222,9 @@ body {
     flex-direction: column;
 }
 
+.section_not-margin-btm {
+    padding-bottom: 0;
+}
 .section:first-of-type {
     padding-top: 6rem;
 }
@@ -414,7 +417,7 @@ body {
 }
 
 .projects__preview-text {
-    margin: 9rem auto 0;
+    margin: 12rem auto 0;
     font-weight: 600;
     color: #fff;
     font-size: 2.6rem;
@@ -785,7 +788,7 @@ body {
     -webkit-box-pack:justify;
     -ms-flex-pack:justify;
     justify-content:space-between;
-    margin: 4.3rem 0 6.3rem 0;
+    margin-top: 4.3rem;
     flex-direction: row;
 }
 .workflow__order {
@@ -794,6 +797,62 @@ body {
     font-family: 'Proxima Nova Rg', sans-serif;
     font-size: 1.26rem;
     line-height: 1.8;
+}
+
+/* logistic */
+
+.logistic {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack:start;
+    -ms-flex-pack:start;
+    justify-content:flex-start;
+    flex-direction: column;
+    min-height: 63rem;
+}
+
+.logistic__header {
+    font-size: 7.2rem;
+    width:40.28rem;
+    margin-top: 32.8rem;
+    margin-left: 20.3rem;
+    line-height: 0.9;
+    font-family: 'FuturaDemiC', sans-serif;
+}
+
+.logistic__sub-header {
+    display: block;
+    font-size: 1.5rem;
+    width: 70%;
+    margin-top: 2.2rem;
+    margin-left: 20.3rem;
+    line-height: 1.5;
+    font-family: 'Proxima Nova Rg', sans-serif;
+}
+
+.logistic__description-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack:justify;
+    -ms-flex-pack:justify;
+    justify-content:space-between;
+    margin-top: 2.2rem;
+    margin-left: 20.3rem;
+    width:70%;
+}
+
+.logistic__description-item {
+    color: #d94b38;
+    width: 30.2rem;
+    display: block;
 }
 
 /* wood */
@@ -812,4 +871,15 @@ body {
     height: 67rem;
     width: 38.1rem;
     background-size: cover;
+}
+
+.auto_img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url("../img/logistic/pic1.png");
+    height: 63rem;
+    width: 38.1rem;
+    background-size: cover;
+
 }
