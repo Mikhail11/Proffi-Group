@@ -52,13 +52,25 @@ html {
 body {
     font-family: 'FuturaDemiC', sans-serif;
 }
-/*  navbar */
 
-.navbar {
+
+.flexible {
     display: flex;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
+    align-items: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    justify-content: space-between;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+}
+
+/*  navbar */
+
+.navbar {
     width: 100%;
     padding: 1.4rem 5rem;
     box-shadow: 2px 2px 4px 2px #b3b0b0;
@@ -68,10 +80,6 @@ body {
     -webkit-box-align: baseline;
     -webkit-align-items: baseline;
     -ms-flex-align: baseline;
-    justify-content: space-between;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
     margin-bottom: 0;
 }
 
@@ -101,8 +109,16 @@ body {
 
 .list {
     display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     align-items: center;
-    justify-content: flex-end;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    -webkit-box-pack:end;
+    -ms-flex-pack:end;
+    justify-content:flex-end;
     font-size: 1.4rem;
     list-style-type: none;
 
@@ -204,21 +220,9 @@ body {
 /* section */
 
 .section {
-    display: flex;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     width: 100%;
     padding: 3rem 0;
     background-color: #fff;
-    align-items: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    justify-content: space-between;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
     flex-direction: column;
 }
 
@@ -235,6 +239,10 @@ body {
 
 .section__content {
     width: 94rem;
+}
+
+.section__content_long {
+    width:110rem;
 }
 
 .section__content_collapse {
@@ -288,21 +296,9 @@ body {
 .skills {
     width: 84%;
     border: 1px solid #e6b82e;
-    display: flex;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     margin: 6.6rem auto;
     padding: 1.6rem 3.1rem;
     background-color: #fff;
-    align-items: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    justify-content: space-between;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
 }
 
 .skills__item {
@@ -363,18 +359,6 @@ body {
 }
 
 .projects__row {
-    display: flex;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    align-items: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    justify-content: space-between;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
     margin-top: 2.3rem;
 }
 
@@ -452,15 +436,9 @@ body {
 
 /* materials */
 .materials {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
     margin-top: 2.3rem;
     flex-direction: column;
 }
@@ -645,15 +623,6 @@ body {
 }
 
 .safety__properties {
-    display:-webkit-box;
-    display:-ms-flexbox;
-    display:flex;
-    -webkit-box-align:center;
-    -ms-flex-align:center;
-    align-items:center;
-    -webkit-box-pack:justify;
-    -ms-flex-pack:justify;
-    justify-content:space-between;
     margin-top: 28rem;
     width: 100%;
 }
@@ -779,15 +748,9 @@ body {
 
 .workflow__orders {
     width:100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
-    -webkit-box-pack:justify;
-    -ms-flex-pack:justify;
-    justify-content:space-between;
     margin-top: 4.3rem;
     flex-direction: row;
 }
@@ -816,36 +779,30 @@ body {
 }
 
 .logistic__header {
-    font-size: 7.2rem;
+    font-size: 6.2rem;
     width:40.28rem;
-    margin-top: 32.8rem;
-    margin-left: 20.3rem;
+    margin-top: 38.8rem;
+    margin-left: 34.3rem;
     line-height: 0.9;
     font-family: 'FuturaDemiC', sans-serif;
 }
 
 .logistic__sub-header {
     display: block;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     width: 70%;
     margin-top: 2.2rem;
-    margin-left: 20.3rem;
+    margin-left: 34.3rem;
     line-height: 1.5;
     font-family: 'Proxima Nova Rg', sans-serif;
 }
 
 .logistic__description-block {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
-    -webkit-box-pack:justify;
-    -ms-flex-pack:justify;
-    justify-content:space-between;
     margin-top: 2.2rem;
-    margin-left: 20.3rem;
+    margin-left: 34.3rem;
     width:70%;
 }
 
@@ -853,9 +810,65 @@ body {
     color: #d94b38;
     width: 30.2rem;
     display: block;
+    font-size: 1.3rem;
 }
 
-/* wood */
+.logistic-footer {
+    margin: 6.2rem 0 6rem 0;
+    align-items: baseline;
+}
+.logistic-footer__slogan-block {
+    align-self: center;
+    width:31.5rem;
+    padding:2.4rem;
+    margin-top: 3rem;
+    background-color: #e6b82e;
+}
+
+.logistic-footer__slogan-text {
+    color:#fff;
+    font-size: 2.5rem;
+}
+
+.logistic-footer__symbols {
+    padding: 0 14rem 0 6rem;
+}
+
+.logistic-footer__symbols-item:first-child {
+    margin-left: 0;
+}
+
+.logistic-footer__symbols-item:last-child {
+    margin-right: 0;
+}
+
+.logistic-footer__symbols-img {
+    display:block;
+    margin: 0 auto 2rem;
+
+}
+.logistic-footer__symbols-text {
+    display: block;
+    text-align: center;
+    width:90%;
+    margin: 0 auto;
+}
+
+
+.icon1 {
+    width:9rem;
+    margin-top: 1.4rem;
+}
+
+.icon2 {
+    width:7rem;
+}
+
+.icon3 {
+    width: 8rem;
+    margin-top: 2.6rem;
+}
+/* styles for support */
 
 .backgrounded {
     background-image: url("../img/history/Pic_1.png");
@@ -878,8 +891,8 @@ body {
     left: 0;
     top: 0;
     background-image: url("../img/logistic/pic1.png");
-    height: 63rem;
-    width: 38.1rem;
+    height: 76rem;
+    width: 45.1rem;
     background-size: cover;
 
 }
