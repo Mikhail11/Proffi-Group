@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1882 12495.646 36 36">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e5b72d;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="_6_icon_fb" data-name="6 icon fb" transform="translate(-3255 11759.999)">
+    <g id="Group_117" data-name="Group 117" transform="translate(1373 735.647)">
+      <path id="Path_105" data-name="Path 105" class="cls-1" d="M9.5,0a18,18,0,1,1-18,18A18,18,0,0,1,9.5,0" transform="translate(8.504 0)"/>
+    </g>
+    <g id="Group_118" data-name="Group 118" transform="translate(1382.846 745.509)">
+      <path id="Path_106" data-name="Path 106" class="cls-2" d="M8.7.486V15.144a.918.918,0,0,1-.258.646.864.864,0,0,1-.663.275h-4.2V9.657H5.722l.33-2.468H3.584V5.606a1.38,1.38,0,0,1,.222-.885,1.272,1.272,0,0,1,.995-.33H6.127V2.143c-.514-.049-1.154-.072-1.913-.072a3.22,3.22,0,0,0-2.322.847A3.215,3.215,0,0,0,1.009,5.35V7.189H-1.129V9.657H1.006v6.407h-7.88a.865.865,0,0,1-.663-.275.909.909,0,0,1-.258-.646V.486a.889.889,0,0,1,.258-.663.9.9,0,0,1,.663-.258H7.784a.913.913,0,0,1,.643.258A.863.863,0,0,1,8.7.486" transform="translate(7.795 0.435)"/>
+    </g>
+  </g>
+</svg>
