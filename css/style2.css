@@ -53,6 +53,16 @@ body {
     font-family: 'FuturaDemiC', sans-serif;
 }
 
+/* хром, сафари */
+body::-webkit-scrollbar { width: 0; }
+
+/* ie 10+ */
+body { -ms-overflow-style: none; }
+
+/* фф (свойство больше не работает, других способов тоже нет)*/
+body { overflow: -moz-scrollbars-none; }
+
+
 
 .flexible {
     display: flex;
@@ -437,7 +447,7 @@ body {
 /* cases */
 .cases {
     position: fixed;
-    top: 0;
+    top: -100%;
     left: 0;
     height: 100%;
     width: 100%;
@@ -446,7 +456,9 @@ body {
     background-size: 60% 100%;
     background-repeat: no-repeat;
     padding: 3rem 5rem;
-    display: none;
+    opacity:0;
+    /*display: none;*/
+    transition: top, opacity 1s ease-in-out;
 }
 
 .cases_open {
@@ -454,7 +466,11 @@ body {
 }
 
 .cases_opened {
-    display: block;
+    /*display: block;*/
+    top:0;
+    opacity:1;
+    z-index: 100;
+    transition: top, opacity 1s ease-in-out;
 }
 
 .cases__header {
@@ -1124,6 +1140,35 @@ body {
 .contacts__list {
     margin-top:2rem;
 }
+
+/*  quiz */
+.quiz {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    background-position-x: 100%;
+    background-size: 60% 100%;
+    background-repeat: no-repeat;
+    padding: 3rem 5rem;
+    opacity:0;
+    transition: top, opacity 1s ease-in-out;
+}
+
+.quiz_open {
+    overflow:hidden;
+}
+
+.quiz_opened {
+    top:0;
+    opacity:1;
+    z-index: 100;
+    transition: top, opacity 1s ease-in-out;
+}
+
+
 
 /*  footer */
 .footer{
