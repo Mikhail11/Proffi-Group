@@ -19,5 +19,9 @@
             event.stopImmediatePropagation();
     });
 
+    if(location.search == '?quiz') {
+        $('body').addClass('quiz_open');
+        $('.quiz').addClass('quiz_opened');
+    }
 
 })(jQuery);
