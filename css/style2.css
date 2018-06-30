@@ -62,7 +62,12 @@ body { -ms-overflow-style: none; }
 /* фф (свойство больше не работает, других способов тоже нет)*/
 body { overflow: -moz-scrollbars-none; }
 
-
+a:focus {
+    color: #000;
+    text-decoration: none;
+    outline: none;
+    outline-offset: 0;
+}
 
 .flexible {
     display: flex;
@@ -97,6 +102,7 @@ body { overflow: -moz-scrollbars-none; }
     position: fixed;
     top: 0;
     left: 0;
+    z-index:50;
 }
 
 .navbar__item_left {
@@ -265,6 +271,7 @@ body { overflow: -moz-scrollbars-none; }
     height: 35rem;
     background-color: #e6b82e;
     position: relative;
+    margin-top: 8rem;
 }
 
 .intro__text-block {
@@ -389,7 +396,7 @@ body { overflow: -moz-scrollbars-none; }
 .projects__preview-shade {
     height: 100%;
     width: 100%;
-    z-index: 100;
+    z-index: 25;
     position: absolute;
     top: 0;
     left: 0;
