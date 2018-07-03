@@ -24,8 +24,10 @@
         $('.quiz').addClass('quiz_opened');
     }
 
-    $('.list__item-link').on('click', function(event) {
-        $('.list__item_active').removeClass('list__item_active');
+    var menu_selector = ".list__item:not(.link-material)"; // Переменная должна содержать название класса или идентификатора, обертки нашего меню.
+
+    $(menu_selector + ' .list__item-link').on('click', function(event) {
+        $('.list__item_active:not(.link-material)').removeClass('list__item_active');
         var $anchor = $(this);
         var parent = $anchor.parent();
         parent.addClass('list__item_active');
@@ -37,7 +39,6 @@
 
 /* scroll menu items active */
 
-    var menu_selector = ".list__item"; // Переменная должна содержать название класса или идентификатора, обертки нашего меню.
     function onScroll(){
         var scroll_top = $(document).scrollTop();
         $(menu_selector + " a").each(function(){
@@ -69,9 +70,123 @@
         });
     });
 
+    function setMaterilaProperties(kind) {
+        var properties = [
+            {
+                hardness: '5',
+                texture: '4',
+                price: '3'
+            },
+
+            {
+                hardness: '3',
+                texture: '5',
+                price: '2'
+            },
+
+            {
+                hardness: '1',
+                texture: '5',
+                price: '4'
+            },
+
+            {
+                hardness: '5',
+                texture: '5',
+                price: '2'
+            },
+
+            {
+                hardness: '1',
+                texture: '1',
+                price: '5'
+            }
+        ];
+
+        Object.keys(properties[kind]).forEach(function(key) {
+            var value = properties[kind][key],
+                $anchor = $('#' + key),
+                current = $anchor.data('current');
+                $anchor.removeClass('scale__value_' + current);
+                $anchor.addClass('scale__value_' + value);
+                $anchor.data('current', value);
+
+        });
+    }
+
+    $('.link-material').on('click', function(e) {
+        $('.link-material.list__item_active').removeClass('list__item_active');
+        $(this).addClass('list__item_active');
+        e.preventDefault();
+        setMaterilaProperties($('.link-material.list__item_active a').data('kind'));
+    });
+
+    var selectOptions = {};
+    $('.quiz__btn').on('click', function(e){
+        e.preventDefault();
+        var $anchor = $(this);
+        var markers = $('.quiz__active-item');
+        var current = $anchor.data('cur');
+        var next = $anchor.data('page');
+        var text = $('.quiz__select_active').text();
+
+        if(!selectOptions[current]) selectOptions[current] = text;
+
+        markers = Array.prototype.map.call(markers, function(item){ return item});
 
 
 
+        $('.quiz__select_active').removeClass('quiz__select_active');
+
+        switch(next) {
+            case '+1':
+                quizClose();
+                break;
+            case 'finally':
+                $('.quiz_' + current).hide();
+                $('.quiz_' + next).show();
+                var items = $('.quiz__active-item');
+                Array.prototype.forEach.call(items, function(item){
+                    $(item).addClass('quiz__active-item_full');
+                });
+                break;
+            case 'revert':
+                $('.quiz_finally').hide();
+                $('.quiz_4').show();
+                var items = $('.quiz__active-item_full');
+                Array.prototype.forEach.call(items, function(item){
+                    $(item).removeClass('quiz__active-item_full');
+                });
+                break;
+            default:
+                $('.quiz_' + current).hide();
+                $('.quiz_' + next).show();
+                if(current > next) {
+                    $(markers[current-1]).removeClass('quiz__active-item_cur');
+                } else {
+                    $(markers[current]).addClass('quiz__active-item_cur');
+                }
+            break;
+
+        }
+    });
+
+    $('.quiz__select').on('click', function(e){
+        e.preventDefault();
+        $('.quiz__select_active').removeClass('quiz__select_active');
+        $(this).addClass('quiz__select_active');
+
+    });
+
+    function quizShow() {
+        selectOptions = {};
+        $('body').addClass('quiz_open');
+        $('.quiz').addClass('quiz_opened');
+    }
+    function quizClose() {
+        $('body').removeClass('quiz_open');
+        $('.quiz').removeClass('quiz_opened');
+    }
 
 
 })(jQuery);

@@ -143,6 +143,7 @@ a:focus {
 .list__item {
     color: #b0afab;
     margin: 0 1.8rem;
+    cursor: pointer;
 
 }
 
@@ -197,6 +198,9 @@ a:focus {
     opacity: 1;
 }
 
+.list-material {
+    cursor: pointer;
+}
 /* button */
 
 .btn {
@@ -1201,7 +1205,13 @@ a:focus {
     height: 5px;
     background-color: #dcdcdc;
     width: 24%;
+    transition: width .5s ease-in-out;
 }
+
+.quiz__active-item_full {
+    width:25%;
+}
+
 .quiz__active-item_cur {
     background-color: #e6b82e;
 }
@@ -1239,6 +1249,7 @@ a:focus {
     margin-top: 2rem;
     display:block;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .quiz__button-block {
