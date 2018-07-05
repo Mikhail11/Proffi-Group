@@ -1,8 +1,8 @@
 (function($) {
-
-    jQuery(window).load(function() {
+    jQuery(window).ready(function() {
         jQuery("#preloader").delay(100).fadeOut("slow");
         jQuery("#load").delay(100).fadeOut("slow");
+        jQuery("#load_content").delay(100).fadeIn("slow");
     });
 
     $('.projects__preview').on('click', function(event){
@@ -142,6 +142,9 @@
             case '+1':
                 quizClose();
                 break;
+            case 'send':
+                finishQuiz();
+                break;
             case 'finally':
                 $('.quiz_' + current).hide();
                 $('.quiz_' + next).show();
@@ -178,6 +181,12 @@
 
     });
 
+    $('.question__btn').on('click', function(e){
+        e.preventDefault();
+        $('body').addClass('quiz_open');
+        $('.quiz').addClass('quiz_opened');
+    });
+
     function quizShow() {
         selectOptions = {};
         $('body').addClass('quiz_open');
@@ -188,5 +197,27 @@
         $('.quiz').removeClass('quiz_opened');
     }
 
+    function send(obj, callback) {
+      /*отправка данных на сервер*/
+    }
+
+    function finishQuiz() {
+        $('#finText').text('Ваша заявка на лестницу успешно отправлена!');
+        $('.quiz__content-items_stretch').attr('style', 'align-self:flex-start');
+        $('#yourName').hide();
+        $('#yourNumber').hide();
+        $('#btnBlock').hide();
+        setTimeout(function() {
+            $('#finText').text('Оставьте заявку, чтобы наши менеджеры обсудили с вами все детали.<br/>' +
+            'Если не нашли для себя подходящего варианта свяжитесь и мы поможем!');
+            quizClose();
+            $('.quiz__content-items_stretch').removeAttr('style');
+            $('.quiz_finally').hide();
+            $('.quiz_1').show();
+            $('#yourName').show();
+            $('#yourNumber').show();
+            $('#btnBlock').show();
+        }, 5000);
+    }
 
 })(jQuery);

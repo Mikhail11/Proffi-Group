@@ -19,6 +19,11 @@
 
 </head>
 <body>
+<div id="preloader">
+    <div id="load">
+        <div class="loaderInner"></div>
+    </div>
+</div>
 <nav class="flexible navbar navbar_fixed-top">
     <div class="navbar__item navbar__item_left">
         <img src="img/Logo.png"  class="navbar__image">
@@ -59,6 +64,7 @@
         <a href="tel:+78432023411" class="btn btn_yellow">+7&nbsp;843&nbsp;202-34-11</a>
     </div>
 </nav>
+<div id="load_content">
 <section class="section flexible">
     <div class="section__content">
         <div class="intro">
@@ -385,6 +391,15 @@
         </div>
     </div>
 </section>
+<section class="section flexible backgrounded-quiz">
+    <div class="section__content">
+        <div class="questions flexible">
+            <span class="question__header">Пройди тест</span>
+            <span class="question__sub-header">и узнай какая лестница тебе подходит</span>
+            <a class="question__btn btn btn_yellow-brd">НАЧАТЬ ТЕСТ</a>
+        </div>
+    </div>
+</section>
 <section class="section flexible">
     <div class="section__content">
         <div class="feedback">
@@ -493,7 +508,6 @@
         </div>
     </div>
 </section>
-
 <section class="quiz">
     <div class="quiz__content flexible">
         <div class="quiz__content-items flexible">
@@ -567,20 +581,21 @@
             </div>
             <div class="quiz__question quiz_finally" hidden="hidden">
                 <span class="quiz__head">Поздравляем, вы собрали лестницу своей мечты! </span>
-                <span class="quiz__description">Оставьте заявку, чтобы наши менеджеры обсудили с вами все детали.<br/>
+                <span class="quiz__description" id="finText">Оставьте заявку, чтобы наши менеджеры обсудили с вами все детали.<br/>
 Если не нашли для себя подходящего варианта свяжитесь и мы поможем!</span>
                 <div class="quiz__select-block">
-                    <input class="quiz__select" placeholder="Ваше имя"/>
-                    <input class="quiz__select" placeholder="Номер телефона"/>
+                    <input class="quiz__select" id="yourName" placeholder="Ваше имя"/>
+                    <input class="quiz__select" id="yourNumber" placeholder="Номер телефона"/>
                 </div>
-                <div class="quiz__button-block flexible">
+                <div class="quiz__button-block flexible" id="btnBlock">
                     <a class="btn btn_yellow-brd quiz__btn quiz__btn_black" data-page="revert" data-cur="finally">Вернутся</a>
-                    <a class="btn btn_yellow quiz__btn" data-page="-1" data-cur="finally">Отправить</a>
+                    <a class="btn btn_yellow quiz__btn" data-page="send" data-cur="finally">Отправить</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
+</div>
 
 
 <!-- Core JavaScript Files -->

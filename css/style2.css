@@ -83,6 +83,20 @@ a:focus {
     -webkit-justify-content: space-between;
 }
 
+#load_content {
+    display:none;
+}
+
+
+.loaderInner {
+    background:#ffffff url(../img/spinner.gif) center center no-repeat;
+    height: 60px;
+    left: 50%;
+    margin: -50px 0 0 -50px;
+    position: absolute;
+    top: 50%;
+    width: 60px;
+}
 /*  navbar */
 
 .navbar {
@@ -367,6 +381,7 @@ a:focus {
     font-size: 7.2rem;
     font-weight: 400;
     margin-left: -3px;
+    margin-top: 5rem;
 }
 
 .projects__sub-header {
@@ -1073,7 +1088,7 @@ a:focus {
 .feedback__header {
     font-size: 6.2rem;
     width:23.28rem;
-    margin-top: 10.8rem;;
+    margin-top: 4.8rem;
     line-height: 0.9;
     font-family: 'FuturaDemiC', sans-serif;
     display:block;
@@ -1269,6 +1284,39 @@ a:focus {
 .quiz__btn_black:hover {
     color:#000;
 }
+
+.questions {
+    min-height: 60rem;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+
+.question__header {
+    font-size: 6.2rem;
+    margin-top: 10.8rem;;
+    line-height: 0.9;
+    font-family: 'FuturaDemiC', sans-serif;
+    display:block;
+}
+
+.question__sub-header {
+    display: block;
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    line-height: 1.5;
+}
+.question__btn {
+    margin-top: 4rem;
+    color:#000;
+    padding: 0.5rem 3rem;
+    font-size: 1.6rem;
+}
+
+.question__btn:hover {
+    color:#000;
+}
+
 /*  footer */
 .footer{
     width:100%;
@@ -1367,6 +1415,13 @@ a:focus {
     background-size: 100% 22rem;
     background-position-y: 63%;
     background-repeat: no-repeat;
+}
+
+.backgrounded-quiz {
+    background-image: url(../img/quiz/bg_pic.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
 }
 
 .wood {
