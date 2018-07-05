@@ -1,9 +1,4 @@
 (function($) {
-    jQuery(window).ready(function() {
-        jQuery("#preloader").delay(100).fadeOut("slow");
-        jQuery("#load").delay(100).fadeOut("slow");
-        jQuery("#load_content").delay(100).fadeIn("slow");
-    });
 
     $('.projects__preview').on('click', function(event){
         if($(event.target).hasClass('projects__preview-btn')) {
