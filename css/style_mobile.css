@@ -1,0 +1,31 @@
+/* media queries */
+@media (max-width:767px) {
+
+    .loaderInner {
+        left:55%;
+    }
+
+    .navbar_desktop {
+        display: none;
+    }
+
+    .section,
+    .section:first-child {
+        padding:0;
+    }
+
+    .section__content {
+        width:90%;
+    }
+
+    /*intro*/
+    .intro {
+        display:none;
+    }
+
+    .intro_mobile {
+        display:flex;
+    }
+
+
+}
