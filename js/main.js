@@ -81,13 +81,13 @@
 
             {
                 hardness: '1',
-                texture: '5',
+                texture: '3',
                 price: '4'
             },
 
             {
                 hardness: '5',
-                texture: '5',
+                texture: '2',
                 price: '2'
             },
 

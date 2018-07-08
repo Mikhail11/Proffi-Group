@@ -5,6 +5,11 @@
         left:55%;
     }
 
+    .header {
+        font-size: 4.2rem;
+        width:100%;
+    }
+
     .navbar_desktop {
         display: none;
     }
@@ -18,6 +23,26 @@
         width:90%;
     }
 
+    .section__content_long {
+        width: 100%;
+        display: flex;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        align-items: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        justify-content: flex-start;
+        -webkit-box-pack: start;
+        -webkit-justify-content: flex-start;
+        flex-direction: column;
+    }
+
+    .section_relative {
+        flex-direction: column-reverse;
+    }
+
     /*intro*/
     .intro {
         display:none;
@@ -28,4 +53,451 @@
     }
 
 
+    /* skills */
+    .skills {
+        flex-direction: column;
+        height: 100vh;
+        align-items: flex-start;
+        -webkit-box-align: start;
+        -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+        justify-content: flex-start;
+        -webkit-box-pack: start;
+        -webkit-justify-content: flex-start;
+        border: none;
+        margin: 0;
+        padding: 3rem 1rem;
+        width: 100%;
+    }
+
+    .skills__item {
+        margin-top: 4rem;
+        width:100%;
+    }
+    .skills__icon {
+        width: 6.3rem;
+        height: 6.3rem;
+        vertical-align: bottom;
+    }
+    .skills_text {
+        font-size: 1.7rem;
+        width: 21.4rem;
+        margin-left: 1rem;
+        line-height: 1.7;
+        font-family: 'Proxima Nova Rg', sans-serif;
+
+    }
+
+    .skills__header {
+        display:block;
+    }
+
+    .icon-tool{
+        width:7.6rem;
+    }
+
+    .icon-five,
+    .icon-time {
+        width:7.6rem;
+        height:7.6rem;
+    }
+
+    /*projects*/
+
+    .projects__sub-header {
+        width: 100%;
+        font-weight: 100;
+        font-family: 'Proxima Nova', sans-serif;
+    }
+
+    .projects__catalog-btn {
+        width:80%;
+        font-size: 2.3rem;
+        font-family: 'Proxima Nova', sans-serif;
+        border-radius: 20px;
+    }
+
+    .projects__preview-img {
+        width: 98%;
+    }
+
+    .projects__row {
+        margin-top: 0.5rem;
+    }
+
+    .projects__preview-item {
+        width: 33%;
+        height: 33%;
+    }
+
+    .projects__preview-shade {
+        width:98%;
+    }
+
+    .projects__preview-text {
+        margin: 4rem auto 0;
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    .projects__preview-btn {
+        display:none;
+    }
+
+    .projects__preview-text::before,
+    .projects__preview-text::after {
+        font-size: 1rem;
+    }
+
+    /* materials  */
+    .materials {
+        margin-top: 0;
+    }
+    .materials__header {
+        margin-top: 1rem;
+    }
+
+    .materials__sub-header {
+        width:100%;
+        font-family: 'Proxima Nova Rg', sans-serif;
+    }
+
+    .materials__description-head,
+    .materials__description-content {
+        display:none;
+    }
+
+    /* safety */
+    .safety {
+        margin-top: 0;
+        background: none;
+    }
+
+    .safety__child {
+        display:block;
+        background-repeat: no-repeat;
+    }
+
+    .safety__sub-header {
+        display: inline;
+        font-size: 1.4rem;
+        font-family:'Proxima Nova Rg', sans-serif;
+        width: 100%;
+        margin-top: 2.2rem;
+        line-height: 1.5;
+        text-transform: none;
+    }
+    .safety__description {
+        display: inline;
+        width: 100%;
+        font-family:'Proxima Nova Rg', sans-serif;
+        margin-top: 1.2rem;
+    }
+
+    .safety__info-block {
+        display:none;
+    }
+
+    .safety__properties {
+        margin-top: 2rem;
+        flex-direction: column;
+    }
+
+    .safety__properties-img {
+        margin-top: 0;
+        width: 5.47rem;
+        display: inline-block;
+        vertical-align: super;
+    }
+
+    .safety__properties-text {
+        margin-top: 0;
+        font-size: 1.3rem;
+        display: inline-block;
+        width: 70%;
+        text-align: justify;
+        margin-left: 1.5rem;
+        font-family: 'Proxima Nova Rg', sans-serif;
+    }
+
+    .safety__properties-item {
+        height: 14.1rem;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+
+    /* workflow */
+
+    .workflow__order {
+       display:none;
+    }
+
+    .workflow__order:first-child {
+        display: block;
+        width:100%;
+    }
+
+    .workflow__sub-header {
+        display:none;
+    }
+
+    .workflow__description {
+        font-size: 1.26rem;
+        width: 100%;
+        text-transform: none;
+    }
+
+    .workflow__quality {
+        display:none;
+    }
+
+    .workflow__quality_mobile {
+        display:block;
+    }
+
+    /* logistic */
+    .logistic {
+       min-height: 23rem;
+    }
+
+    .logistic__header,
+    .logistic__sub-header,
+    .logistic-footer__slogan-block,
+    .logistic__description-block {
+        display:none;
+    }
+
+    .logistic__header_mobile {
+        display:block;
+        line-height: 1;
+    }
+    .logistic__sub-header_mobile {
+        display:block;
+    }
+
+    .logistic-footer {
+        margin: 2.2rem 0 6rem 0;
+        width: 90%;
+    }
+
+    .logistic-footer__symbols {
+        width:100%;
+        flex-direction: column;
+        padding:0;
+    }
+
+    .logistic-footer__symbols-item {
+        width: 100%;
+        margin-top: 3rem;
+    }
+    .logistic-footer__symbols-img {
+        margin:0;
+        display: inline-block;
+    }
+
+    .logistic-footer__symbols-text {
+        display: inline-block;
+        text-align: left;
+        width: 50%;
+        margin: 0;
+    }
+
+    .icon1 {
+        margin-right: 2rem;
+    }
+
+    .icon2 {
+        margin-right: 3rem;
+        margin-left: 1rem;
+    }
+    .icon3 {
+        margin-right: 3rem;
+    }
+
+    .auto_img {
+        position: static;
+        background-image: url(../img/logistic/pic.png);
+        height: 27rem;
+        width: 24.1rem;
+        background-size: contain;
+        background-repeat: no-repeat;
+        align-self: flex-start;
+    }
+
+    /* history */
+
+    .history {
+        min-height: 100vh;
+    }
+    .history__header {
+        margin-top: 40%;
+    }
+    .history__sub-header {
+        font-family: 'Proxima Nova Rg', sans-serif;
+        width:100%;
+    }
+
+    .history__info-block {
+        display:none;
+    }
+
+    /* team */
+    .team {
+        margin-bottom: 4rem;
+    }
+
+    .team__persons {
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .team__person-name,
+    .team__person-speciality {
+        color:#000;
+        text-align: left;
+    }
+
+    .team__person-name {
+        font-size: 1.8rem;
+        font-family: 'Proxima Nova Rg', sans-serif;
+    }
+
+    .team__person-speciality {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-top: 1rem;
+    }
+
+    .team__person-speciality {
+        background: none;
+    }
+
+    .team__persons-item {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 4rem;
+    }
+
+    .team__person-img {
+        align-self: baseline;
+        width: 14rem;
+        margin-right: 2rem;
+    }
+
+    .team__description {
+        margin-top: 3.3rem;
+        flex-direction: column;
+    }
+    .team__description-item {
+        margin-top: 2rem;
+    }
+
+
+    /* quiz */
+
+    .questions {
+        min-height: 100vh;
+        justify-content: center;
+    }
+
+    .question__header,
+    .question__sub-header {
+        display:none;
+    }
+
+    .question__header_mobile {
+        display: block;
+        text-align: center;
+    }
+
+    .question__btn {
+        background: #e6b82e;
+        color: #fff;
+    }
+
+    /* feedback */
+    .feedback {
+        text-align: center;
+    }
+
+    .feedback__header {
+        text-align: left;
+    }
+
+    .feedback__sub-header {
+        width: 100%;
+        margin-top: 2rem;
+        text-align: left;
+    }
+    .feedback__content-item_stretch {
+        display:none;
+    }
+
+    .feedback__content-item,
+    .form__input
+    {
+        width:100%;
+    }
+
+    .feedback__button {
+        padding: 0.6rem 4.4rem;
+        font-size: 1.8rem;
+        border-radius: 20px;
+
+    }
+
+    /* contacts */
+
+    .contacts {
+        flex-direction: column;
+        align-items: flex-start;
+        -webkit-box-align: start;
+        -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+    }
+
+    .contacts__map {
+        display:none;
+    }
+
+    .contacts__icon {
+        display: none;
+    }
+
+    .iconed-list:last-of-type {
+        flex-direction: row;
+        width:60%;
+    }
+
+    .iconed-list:last-of-type .iconed-list__item-text{
+        display: none;
+    }
+
+    .iconed-list:last-of-type .iconed-list__item-img{
+        margin-right: 1rem;
+        width: 60%;
+    }
+
+    .backgrounded-team {
+        background: none;
+    }
+    .backgrounded-quiz {
+        background-image: url(../img/quiz/Pic_1.png);
+    }
+
+    .backgrounded {
+        background-image: url(../img/history/Pic_2.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .wood {
+        position: static;
+        height: 38rem;
+        width: 21.1rem;
+        align-self: flex-end;
+    }
 }

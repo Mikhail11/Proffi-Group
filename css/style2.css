@@ -69,6 +69,12 @@ a:focus {
     outline-offset: 0;
 }
 
+.header {
+    font-family: 'FuturaDemiC', sans-serif;
+    font-size: 7.2rem;
+    font-weight: 400;
+}
+
 .flexible {
     display: flex;
     display: -webkit-box;
@@ -385,6 +391,15 @@ a:focus {
     background-color: #fff;
 }
 
+.skills__header {
+    display:none;
+    font-size: 4.2rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+}
+
 .skills__item {
     width: 23rem;
 }
@@ -426,9 +441,6 @@ a:focus {
 /* projects */
 
 .projects__header {
-    display: inline-block;
-    font-size: 7.2rem;
-    font-weight: 400;
     margin-left: -3px;
     margin-top: 5rem;
 }
@@ -647,7 +659,6 @@ a:focus {
 }
 
 .materials__header {
-    font-size: 7.2rem;
     margin-top: 8.8rem;
     line-height: 1;
 }
@@ -785,7 +796,6 @@ a:focus {
 }
 
 .safety__header {
-    font-size: 7.2rem;
     margin-top: 4.8rem;
     line-height: 1;
 }
@@ -866,7 +876,6 @@ a:focus {
 }
 
 .history__header {
-    font-size: 7.2rem;
     width:32.8rem;
     margin-top: 4.8rem;
     line-height: 1;
@@ -913,7 +922,6 @@ a:focus {
 
 
 .workflow__header {
-    font-size: 7.2rem;
     width:40.28rem;
     margin-top: 4.8rem;
     line-height: 0.9;
@@ -936,6 +944,17 @@ a:focus {
     min-height: 25rem;
 }
 
+.workflow__quality_mobile {
+    display: none;
+    width: 100%;
+    margin-top: 5.7rem;
+    background-image: url(../img/workflow/Illustration.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 50rem;
+    background-position-x: 50%;
+}
+
 .workflow__description {
     font-family: 'Proxima Nova Rg', sans-serif;
     display: block;
@@ -943,6 +962,7 @@ a:focus {
     width: 57rem;
     margin-top: 2.2rem;
     line-height: 1.5;
+    text-transform: uppercase;
 }
 
 .workflow__orders {
@@ -978,12 +998,10 @@ a:focus {
 }
 
 .logistic__header {
-    font-size: 6.2rem;
     width:40.28rem;
     margin-top: 38.8rem;
     margin-left: 34.3rem;
     line-height: 0.9;
-    font-family: 'FuturaDemiC', sans-serif;
 }
 
 .logistic__sub-header {
@@ -995,6 +1013,18 @@ a:focus {
     line-height: 1.5;
     font-family: 'Proxima Nova Rg', sans-serif;
 }
+
+.logistic__header_mobile {
+   display:none;
+}
+
+.logistic__sub-header_mobile {
+    display:none;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    font-family: 'Proxima Nova Rg', sans-serif;
+}
+
 
 .logistic__description-block {
     -webkit-box-align: start;
@@ -1070,11 +1100,9 @@ a:focus {
 
 /* team block */
 .team__header {
-    font-size: 6.2rem;
     width:23.28rem;
     margin-top: 10.8rem;;
     line-height: 0.9;
-    font-family: 'FuturaDemiC', sans-serif;
     display:block;
 }
 
@@ -1135,11 +1163,9 @@ a:focus {
 /* feedback */
 
 .feedback__header {
-    font-size: 6.2rem;
     width:23.28rem;
     margin-top: 4.8rem;
     line-height: 0.9;
-    font-family: 'FuturaDemiC', sans-serif;
     display:block;
 }
 
@@ -1194,7 +1220,6 @@ a:focus {
     margin-bottom: 6rem;
 }
 .contacts__header {
-    font-size: 6.2rem;
     width:23.28rem;
     margin-top: 8.8rem;
     line-height: 0.9;
@@ -1342,11 +1367,13 @@ a:focus {
 
 
 .question__header {
-    font-size: 6.2rem;
     margin-top: 10.8rem;;
     line-height: 0.9;
     font-family: 'FuturaDemiC', sans-serif;
     display:block;
+}
+.question__header_mobile {
+    display:none;
 }
 
 .question__sub-header {
@@ -1481,6 +1508,14 @@ a:focus {
     height: 67rem;
     width: 38.1rem;
     background-size: cover;
+}
+
+.safety__child {
+    display:none;
+    background-image: url(../img/safety/child.png);
+    height: 30rem;
+    width: 100%;
+    background-size: contain;
 }
 
 .auto_img {
