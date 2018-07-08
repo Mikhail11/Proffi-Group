@@ -81,7 +81,7 @@
     }
     .skills_text {
         font-size: 1.7rem;
-        width: 21.4rem;
+        width: 60%;
         line-height: 1.7;
         font-family: 'Proxima Nova Rg', sans-serif;
 
@@ -498,5 +498,17 @@
         height: 38rem;
         width: 21.1rem;
         align-self: flex-end;
+    }
+}
+
+
+@media (max-width: 320px) {
+    .intro__img-mobile {
+        width: 20rem;
+    }
+
+    .intro__shewron-mobile {
+        width: 3rem;
+        margin-top: 2rem;
     }
 }
