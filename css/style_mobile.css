@@ -28,7 +28,7 @@
         box-shadow: none;
         transition: left 1s;
         border:none;
-
+        z-index: 2000;
     }
 
     .navbar-mobile_open {
@@ -63,6 +63,7 @@
         font-family: 'Proxima Nova Rg', sans-serif;
         text-transform: capitalize;
         color:#000;
+        display:inline-block;
     }
 
     .navbar-mobile__contacts {
@@ -97,8 +98,16 @@
         background-color: #e6b82e !important;
     }
 
-    .section,
+    .section_intro {
+        display:flex;
+    }
+
     .section:first-child {
+        padding-top:5rem;
+    }
+
+    .section,
+    .section:nth-of-type(2){
         padding:0;
     }
 
@@ -554,6 +563,7 @@
     .quiz{
         padding: 0;
         overflow-y: scroll;
+        z-index:3000;
     }
     .quiz__content{
         flex-direction: column;
