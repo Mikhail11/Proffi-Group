@@ -10,8 +10,91 @@
         width:100%;
     }
 
-    .navbar_desktop {
-        display: none;
+    .mobile-header {
+        display:flex;
+    }
+
+    /* navbar */
+
+    .navbar {
+        flex-direction: column;
+        padding:0;
+        width:80%;
+        left:-80%;
+        height: 100%;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        box-shadow: none;
+        transition: left 1s;
+        border:none;
+
+    }
+
+    .navbar-mobile_open {
+        left:0;
+    }
+
+    .navbar__item_left,
+    .navbar__item_right {
+        display:none;
+    }
+
+    .navbar__item {
+        width:100%;
+    }
+
+    .navbar__list {
+        width: 100%;
+        flex-direction: column;
+        padding-left: 0;
+    }
+
+    .navbar__list .list__item {
+        margin:0;
+        padding: 1.5rem 6rem;
+        align-self: stretch;
+        border-bottom: 1px solid #dcdcdc;
+    }
+
+    .navbar__list .list__item .list__item-link {
+        font-size: 2rem;
+        text-align: left;
+        font-family: 'Proxima Nova Rg', sans-serif;
+        text-transform: capitalize;
+        color:#000;
+    }
+
+    .navbar-mobile__contacts {
+        display:block;
+        padding: 1.5rem 0 1.5rem 6rem !important;
+    }
+
+    .navbar__list .list__item:hover .list__item-underline,
+    .navbar__list .list__item_active .list__item-underline,
+    .navbar__list .list__item .list__item-underline {
+        display:none;
+    }
+
+    .navbar__list .list__item:hover,
+    .navbar__list .list__item_active {
+        background-color: #dcdcdc;
+    }
+
+    .navbar-mobile_ylw {
+        display: flex;
+        border-color:#e6b82e;
+        background-color: #e6b82e;
+        padding: 1.5rem 1rem 1.5rem 6rem !important;
+        justify-content: flex-end;
+        -webkit-box-pack: end;
+        -webkit-justify-content: flex-end;
+    }
+
+    .navbar-mobile_ylw:active,
+    .navbar-mobile_ylw:hover {
+        border-color:#e6b82e !important;
+        background-color: #e6b82e !important;
     }
 
     .section,
@@ -464,6 +547,20 @@
 
     .contacts__icon {
         display: none;
+    }
+
+    /* quiz */
+
+    .quiz{
+        padding: 0;
+        overflow-y: scroll;
+    }
+    .quiz__content{
+        flex-direction: column;
+    }
+
+    .quiz__content-items {
+        width:100%
     }
 
     .iconed-list:last-of-type {

@@ -14,12 +14,19 @@
             event.stopImmediatePropagation();
     });
 
-    if(location.search == '?quiz') {
-        $('body').addClass('quiz_open');
-        $('.quiz').addClass('quiz_opened');
-    }
+    $('.burger').on('click', function(e){
+        e.preventDefault();
+        $('.navbar-mobile__overlay').addClass('navbar-mobile__overlay_open');
+        $('.navbar').addClass('navbar-mobile_open');
+    });
 
-    var menu_selector = ".list__item:not(.link-material)"; // Переменная должна содержать название класса или идентификатора, обертки нашего меню.
+    $('.closed').on('click', function(e){
+        e.preventDefault();
+        $('.navbar-mobile__overlay').removeClass('navbar-mobile__overlay_open');
+        $('.navbar').removeClass('navbar-mobile_open');
+    });
+
+    var menu_selector = ".list__item:not(.link-material):not(.navbar-mobile__contacts):not(.navbar-mobile_ylw)"; // Переменная должна содержать название класса или идентификатора, обертки нашего меню.
 
     $(menu_selector + ' .list__item-link').on('click', function(event) {
         $('.list__item_active:not(.link-material)').removeClass('list__item_active');
@@ -64,50 +71,6 @@
             });
         });
     });
-
-    function setMaterilaProperties(kind) {
-        var properties = [
-            {
-                hardness: '5',
-                texture: '4',
-                price: '3'
-            },
-
-            {
-                hardness: '3',
-                texture: '5',
-                price: '2'
-            },
-
-            {
-                hardness: '1',
-                texture: '3',
-                price: '4'
-            },
-
-            {
-                hardness: '5',
-                texture: '2',
-                price: '2'
-            },
-
-            {
-                hardness: '1',
-                texture: '1',
-                price: '5'
-            }
-        ];
-
-        Object.keys(properties[kind]).forEach(function(key) {
-            var value = properties[kind][key],
-                $anchor = $('#' + key),
-                current = $anchor.data('current');
-                $anchor.removeClass('scale__value_' + current);
-                $anchor.addClass('scale__value_' + value);
-                $anchor.data('current', value);
-
-        });
-    }
 
     $('.link-material').on('click', function(e) {
         $('.link-material.list__item_active').removeClass('list__item_active');
@@ -182,6 +145,53 @@
         $('.quiz').addClass('quiz_opened');
     });
 
+
+    //  help functions
+
+    function setMaterilaProperties(kind) {
+        var properties = [
+            {
+                hardness: '5',
+                texture: '4',
+                price: '3'
+            },
+
+            {
+                hardness: '3',
+                texture: '5',
+                price: '2'
+            },
+
+            {
+                hardness: '1',
+                texture: '3',
+                price: '4'
+            },
+
+            {
+                hardness: '5',
+                texture: '2',
+                price: '2'
+            },
+
+            {
+                hardness: '1',
+                texture: '1',
+                price: '5'
+            }
+        ];
+
+        Object.keys(properties[kind]).forEach(function(key) {
+            var value = properties[kind][key],
+                $anchor = $('#' + key),
+                current = $anchor.data('current');
+            $anchor.removeClass('scale__value_' + current);
+            $anchor.addClass('scale__value_' + value);
+            $anchor.data('current', value);
+
+        });
+    }
+
     function quizShow() {
         selectOptions = {};
         $('body').addClass('quiz_open');
@@ -190,6 +200,10 @@
     function quizClose() {
         $('body').removeClass('quiz_open');
         $('.quiz').removeClass('quiz_opened');
+        var items = $('.quiz__active-item_full');
+        Array.prototype.forEach.call(items, function(item){
+            $(item).removeClass('quiz__active-item_full');
+        });
     }
 
     function send(obj, callback) {

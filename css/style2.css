@@ -44,6 +44,28 @@
     font-style: normal;
 }
 
+
+/* animation */
+
+@keyframes menu_open {   /* назовём анимацию: "go-left-right" */
+    from {
+        left: -80%;
+    }
+    to {
+        left: 0;
+    }
+}
+
+/* Префикс для Chrome, Opera, Safari */
+@-webkit-keyframes menu_open {
+    from {
+        left: -80%;
+    }
+    to {
+        left: 0;
+    }
+}
+
 /* base */
 html {
     font-size: 10px;
@@ -103,6 +125,38 @@ a:focus {
     top: 50%;
     width: 60px;
 }
+
+
+/* mobile header */
+
+.mobile-header {
+   display:none;
+    background-color: #e6b82e;
+    padding: 1.5rem;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+
+}
+.mobile-header__icon {
+    width:2rem;
+    height:2rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor:pointer;
+}
+
+/* icons */
+.closed {
+    background-image: url(../img/close.png);
+}
+
+.burger{
+    background-image: url(../img/burger.png);
+}
+.phone {
+    background-image: url(../img/phone.png);
+}
 /*  navbar */
 
 .navbar {
@@ -141,7 +195,25 @@ a:focus {
     width: 94rem;
 }
 
-/* list */
+.navbar-mobile__overlay {
+    display: block;
+    z-index: 12;
+    width: 0;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    position: fixed;
+}
+
+.navbar-mobile__overlay_open {
+    /*display:block;*/
+    width:100%;
+
+}
+.navbar-mobile__contacts,
+.navbar-mobile_ylw {
+    display:none;
+}
+    /* list */
 
 .list {
     display: flex;
@@ -220,6 +292,13 @@ a:focus {
 
 .list-material {
     cursor: pointer;
+}
+
+.list__icon{
+    height:2rem;
+    width:2rem;
+    display: block;
+    background-size: contain;
 }
 /* button */
 
@@ -378,6 +457,12 @@ a:focus {
     margin-top: 2rem;
 }
 
+
+.intro__button_mobile-last:focus,
+.intro__button_mobile-last:active,
+.intro__button_mobile-last:hover {
+    color:#000;
+}
 .intro__shewron-mobile {
     width:5rem;
     margin-top: 6rem;
