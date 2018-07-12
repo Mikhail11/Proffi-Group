@@ -99,7 +99,7 @@
         var markers = $('.quiz__active-item');
         var current = $anchor.data('cur');
         var next = $anchor.data('page');
-        var text = $('.quiz__select_active').text();
+        var text = $('.quiz__select_active').data('pic');
 
         if(!selectOptions[current]) selectOptions[current] = text;
 
@@ -154,8 +154,7 @@
 
     $('.question__btn').on('click', function(e){
         e.preventDefault();
-        $('body').addClass('quiz_open');
-        $('.quiz').addClass('quiz_opened');
+        quizShow();
     });
 
 
@@ -206,7 +205,12 @@
     }
 
     function quizShow() {
-        selectOptions = {};
+        selectOptions = [];
+        var src = $('.quiz__img').attr('src');
+        if (src != 'img/quiz_img/003.png') {
+            $('.quiz__img').attr('src', 'img/quiz_img/003.png');
+        }
+        $('.quiz_1 .quiz__select:first-child').addClass('quiz__select_active');
         $('body').addClass('quiz_open');
         $('.quiz').addClass('quiz_opened');
     }
@@ -218,6 +222,23 @@
             $(item).removeClass('quiz__active-item_full');
         });
     }
+
+    function getImageUrl(arr, page){
+        switch(page){
+            case '1':
+                return 'img/quiz/' + arr[0]+'.png';
+            case '2':
+                return 'img/quiz/' + arr[1] + '_' + arr[0]+'.png';
+            case '3':
+                return 'img/quiz/' + arr[1] + '_' + arr[2] + '_' + arr[0]+'.png';
+            case '4':
+                return 'img/quiz/' + arr[1]+ '_' + arr[3] + '_' + arr[2] + '_' + arr[0]+'.png';
+            default:
+                return 'img/quiz/' + arr[1]+ '_' + arr[3] + '_' + arr[2] + '_' + arr[0]+'.png';
+        }
+
+    }
+
 
     function send(obj, callback) {
       /*отправка данных на сервер*/
