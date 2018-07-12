@@ -1,14 +1,14 @@
 <?php get_header(); ?>
-<?php  if (have_posts()) : while ( have_posts()) : the_post(); ?>
+<?php query_posts('post_type=page');  while ( have_posts() ) : the_post(); ?>
     <section class="section flexible section_intro">
         <div class="section__content">
             <div class="intro_mobile flexible">
                 <img src="<?= bloginfo('template_directory'); ?>/img/Logo.png"  class="intro__img-mobile">
                 <span class="intro__sub-header-mobile">
-                производство лестниц в Казани
+                <?php the_field('blck_1_subheader'); ?>
             </span>
                 <span class="intro__header-mobile">
-                Закажите замер и получите 2 варианта дизайна в подарок!
+                <?php the_field('blck_1_header'); ?>
             </span>
                 <a class="intro__button_mobile btn btn_yellow">ДАЙТЕ ДВЕ</a>
                 <a class="intro__button_mobile intro__button_mobile-last btn btn_yellow-brd">ЗАЯВКА</a>
@@ -20,10 +20,10 @@
         <div class="section__content">
             <div class="intro">
             <span class="intro__text-block intro__text-block_head">
-                <?php echo the_field('blck_1_header'); ?>
+                <?php the_field('blck_1_header'); ?>
             </span>
                 <span class="intro__text-block intro__text-block_sub-head">
-                Производство лестниц в Казани
+                <?php the_field('blck_1_subheader'); ?>
             </span>
                 <a class="intro__button btn btn_white">Заказать</a>
                 <div class="intro__image-block"></div>
@@ -35,19 +35,19 @@
                 <div class="skills__item">
                     <div class="skills__icon icon-time"></div>
                     <span class="skills_text">
-                    Соблюдаем сроки и качество по договору
+                    <?php the_field('blck_1_quality_1'); ?>
                 </span>
                 </div>
                 <div class="skills__item">
                     <div class="skills__icon icon-five"></div>
                     <span class="skills_text">
-                    5 лет гарантии на наши лестницы
+                    <?php the_field('blck_1_quality_2'); ?>
                 </span>
                 </div>
                 <div class="skills__item">
                     <div class="skills__icon icon-tool"></div>
                     <span class="skills_text">
-                    Мы производим лестницы в собственном цеху
+                    <?php the_field('blck_1_quality_3'); ?>
                 </span>
                 </div>
 
@@ -58,8 +58,8 @@
         <div class="section__content">
             <div class="projects">
                 <div class="project__text-block">
-                    <span class="projects__header header">Наши проекты</span>
-                    <span class="projects__sub-header">Наша компания успешно создает лестницы для частных домов и коммерческих объектов в Казани более 7 лет. Взгляните на наши последние проекты и оцените качество нашей работы.</span>
+                    <span class="projects__header header"><?php the_field('blck_2_header'); ?></span>
+                    <span class="projects__sub-header"><?php the_field('blck_2_subheader'); ?></span>
                 </div>
                 <div class="projects__preview">
                     <div class="projects__row flexible">
@@ -110,7 +110,7 @@
                     </div>
                 </div>
                 <div class="projects__btn-group">
-                    <a class="projects__catalog-btn btn btn_yellow-brd">скачать каталог</a>
+                    <a class="projects__catalog-btn btn btn_yellow-brd"><?php the_field('blck_2_button'); ?></a>
                 </div>
             </div>
         </div>
@@ -118,12 +118,11 @@
     <section class="section section_relative flexible" id="materials">
         <div class="section__content">
             <div class="materials flexible">
-                <span class="materials__header header">Лучшее дерево</span>
+                <span class="materials__header header"><?php the_field('blck_3_header'); ?></span>
                 <span class="materials__sub-header">
-                Качество дерева играет решающую роль в создании лестницы. Твердость, фактура, качество обработки и сушки — все эти и многие другие факторы сказываются на качестве итогового продукта.
-                Именно поэтому мы в Proffi Group с особым трепетом и вниманием относимся к качеству дерева и уже более 7 лет работаем с проверенными поставщиками качественной древесины.
+                <?php the_field('blck_3_subheader'); ?>
             </span>
-                <span class="materials_offer">Выберите дерево, которое вам по душе</span>
+                <span class="materials_offer"><?php the_field('blck_3_choose'); ?></span>
                 <div class="materials__selector">
                     <ul class="materials__selector-list list">
                         <li class="list__item link-material list__item_active">
@@ -179,14 +178,12 @@
     <section class="section section_relative flexible" id="safety">
         <div class="section__content">
             <div class="safety">
-                <span class="safety__header header">Безопасность</span>
+                <span class="safety__header header"><?php the_field('blck_4_header'); ?></span>
                 <span class="safety__sub-header">
-                При проектировании лестниц мы в PROFFI GROUP уделяем особое
-                внимание безопасности их использования.
+                <?php the_field('blck_4_subheader'); ?>
             </span>
                 <span class="safety__description">
-                Дети активны и крайне любопытны, лестница является для них объектом повышенного интереса и воспринимается как "горка".
-                Поэтому крайне важно сделать лестницу максимально безопасной для детей.
+                <?php the_field('blck_4_description'); ?>
             </span>
                 <div class="safety__info-block">
                 <span class="safety__info-text">
@@ -198,21 +195,19 @@
                     <div class="safety__properties-item">
                         <img src="<?= bloginfo('template_directory'); ?>/img/safety/icon1.svg" class="safety__properties-img">
                         <span class="safety__properties-text">
-                        Устанавливаем спецальные ворота безопасности для защиты детей от лестницы
+                        <?php the_field('blck_4_skills_1'); ?>
                     </span>
                     </div>
                     <div class="safety__properties-item">
                         <img src="<?= bloginfo('template_directory'); ?>/img/safety/icon2.svg" class="safety__properties-img">
                         <span class="safety__properties-text">
-                        Скругляем все острые углы на ступенях
-                        и других частях лестницы для смягчения потенциального удара
+                        <?php the_field('blck_4_skills_2'); ?>
                     </span>
                     </div>
                     <div class="safety__properties-item">
                         <img src="<?= bloginfo('template_directory'); ?>/img/safety/icon3.svg" class="safety__properties-img">
                         <span class="safety__properties-text">
-                        Рассчитываем расстояние между балясинами так,
-                        чтобы ребенок не смог просунть между ними голову
+                        <?php the_field('blck_4_skills_3'); ?>
                     </span>
                     </div>
                 </div>
@@ -223,24 +218,22 @@
     <section class="section section_not-margin-btm flexible" id="workflow">
         <div class="section__content">
             <div class="workflow">
-                <span class="workflow__header header">Отвечаем за качество</span>
-                <span class="workflow__sub-header">На каждом этапе работы</span>
+                <span class="workflow__header header"><?php the_field('blck_5_header'); ?></span>
+                <span class="workflow__sub-header"><?php the_field('blck_5_subheader'); ?></span>
                 <div class="workflow__quality"></div>
                 <span class="workflow__description">
-                Для каждого клиента мы выделяем индивидуального менеджера, который ведет проект.
-                Менеджер следит за тем, чтобы все ваши пожелания были выполнены,
-                отвечает на ваши вопросы и решает возникающие проблемы.
+                <?php the_field('blck_5_description'); ?>
             </span>
                 <div class="workflow__quality_mobile"></div>
                 <div class="workflow__orders flexible">
                 <span class="workflow__order">
-                    На этапе оформления заказа офис-менеджер уточняет всю информацию об объекте: какой дом, на какой стадии строительства, наличие внутренней отделки и все пожелания клиента. Затем осуществляется замер. Мы стараемся учитывать пожелания вплоть до материала лестницы.
+                    <?php the_field('blck_5_step_1'); ?>
                 </span>
                     <span class="workflow__order">
-                    На этапе разработки дизайн проекта клиент видит дизайн лестницы. Когда все пожелания клиента учтены и выполнены, начинается этап утверждения проекта. Во время процесса подписания договора, клиенту также предоставляется два чек-листа.
+                    <?php the_field('blck_5_step_2'); ?>
                 </span>
                     <span class="workflow__order">
-                    Безопасность лестницы – главный принцип для нас. Поэтому мы оставляем за собой право дать рекомендацию для изготовления изделия из другого материала, если пожелание клиента небезопасно.
+                    <?php the_field('blck_5_step_3'); ?>
                 </span>
                 </div>
             </div>
@@ -251,12 +244,10 @@
             <div class="section__content">
                 <div class="logistic">
                 <span class="logistic__header header">
-                    Доставляем
+                    <?php the_field('blck_6_header'); ?>
                 </span>
                     <span class="logistic__sub-header">
-                    ДЛЯ КАЖДОГО КЛИЕНТА МЫ ВЫДЕЛЯЕМ ИНДИВИДУАЛЬНОГО МЕНЕДЖЕРА,КОТОРЫЙ ВЕДЕТ ПРОЕКТ.
-                    МЕНЕДЖЕР СЛЕДИТ ЗА ТЕМ, ЧТОБЫ ВСЕ ВАШИ ПОЖЕЛАНИЯ БЫЛИ ВЫПОЛНЕНЫ,
-                    ОТВЕЧАЕТ НА ВАШИ ВОПРОСЫ И РЕШАЕТ ВОЗНИКАЮЩИЕ ПРОБЛЕМЫ.
+                    <?php the_field('blck_6_subheader'); ?>
                 </span>
                     <span class="logistic__header_mobile header">
                     Proffi Group — всегда доставляет.
@@ -266,10 +257,10 @@
                 </span>
                     <div class="logistic__description-block flexible">
                     <span class="logistic__description-item">
-                        Наша компания успешно создает лестницы для частных домов и коммерческих объектов в Казани более 7 лет. Взгляните на наши последние проекты и оцените качество нашей работы.
+                        <?php the_field('blck_6_text_1'); ?>
                     </span>
                         <span class="logistic__description-item">
-                        Наша компания успешно создает лестницы для частных домов и коммерческих объектов в Казани более 7 лет. Взгляните на наши последние проекты и оцените качество нашей работы.
+                        <?php the_field('blck_6_text_2'); ?>
                     </span>
                     </div>
                 </div>
@@ -301,18 +292,13 @@
     <section class="section backgrounded flexible" id="history">
         <div class="section__content">
             <div class="history">
-                <span class="history__header header">История компании</span>
+                <span class="history__header header"><?php the_field('blck_7_header'); ?></span>
                 <span class="history__sub-header">
-                «ИСТОРИЯ КОМПАНИИ НАЧАЛАСЬ В 2007 ГОДУ С ЖЕЛАНИЯ ДЕЛАТЬ ЛУЧШИЕ ЛЕСТНИЦЫ.
-                СО ВРЕМЕНЕМ МАСТЕРСТВО НАШЕЙ КОМАНДЫ ВЫРОСЛО, ПОЯВИЛОСЬ СОБСТВЕННОЕ ПРОИЗВОДСТВО С ОТДЕЛОМ МЕНЕДЖЕМЕНТА»
+                <?php the_field('blck_7_subheader'); ?>
             </span>
                 <div class="history__info-block">
                 <span class="history__info-text">
-                    Благодаря энтузиазму и стремлению команды
-                    делать качественные и безопасные лестницы,
-                    а также желанию учиться и увеличивать мастерство,
-                    компания Proffi Group стала лидером
-                    на казанском рынке производства лестниц.
+                    <?php the_field('blck_7_description'); ?>
                 </span>
                 </div>
             </div>
@@ -322,7 +308,7 @@
         <div class="section__content">
             <div class="team">
             <span class="team__header header">
-                Наша команда
+                <?php the_field('blck_8_header'); ?>
             </span>
                 <div class="team__persons flexible">
                     <div class="team__persons-item">
@@ -349,10 +335,10 @@
                 </div>
                 <div class="team__description flexible">
                 <span class="team__description-item">
-                    В Proffi Group работают настоящие профессионалы. Сегодня каждую операцию по изготовлению лестницы делают на отдельном участке: столяры распиливают и делают заготовки для лестниц. На шлифовальном участке лестницу избавляют от заусенцев и делают её идеально гладкой.
+                    <?php the_field('blck_8_text_1'); ?>
                 </span>
                     <span class="team__description-item">
-                    На малярном участке красят и обрабатывают лестницу, чтобы она прослужила клиентам минимум 15 лет. Монтажные бригады делают финальную работу — устанавливают лестницу в доме клиента.
+                    <?php the_field('blck_8_text_2'); ?>
                 </span>
                 </div>
             </div>
@@ -575,7 +561,5 @@
         </div>
     </section>
 
-<?php endwhile; ?>
-<?php else: ?>
-<?php endif; ?>
+<?php endwhile; // end of the loop. ?>
 <?php get_footer(); ?>
