@@ -477,7 +477,7 @@
         <div class="quiz__content flexible">
             <div class="quiz__content-items flexible">
                 <div class="quiz__img-block">
-                    <img src="<?= bloginfo('template_directory'); ?>/img/quiz/003.png" alt="" class="quiz__img">
+                    <img src="<?= bloginfo('template_directory'); ?>/img/quiz_img/003.png" alt="" class="quiz__img">
                 </div>
             </div>
             <div class="quiz__content-items quiz__content-items_stretch flexible">

@@ -618,4 +618,8 @@
         width: 3rem;
         margin-top: 2rem;
     }
+
+    .safety__properties-item {
+        height:18rem;
+    }
 }

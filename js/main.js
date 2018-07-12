@@ -92,22 +92,21 @@
         setMaterilaProperties($('.link-material.list__item_active a').data('kind'));
     });
 
-    var selectOptions = {};
+    var selectOptions = [];
+    var quiz_path = $('.quiz').data('path');
     $('.quiz__btn').on('click', function(e){
         e.preventDefault();
         var $anchor = $(this);
         var markers = $('.quiz__active-item');
         var current = $anchor.data('cur');
         var next = $anchor.data('page');
-        var text = $('.quiz__select_active').data('pic');
 
-        if(!selectOptions[current]) selectOptions[current] = text;
 
         markers = Array.prototype.map.call(markers, function(item){ return item});
 
 
 
-        $('.quiz__select_active').removeClass('quiz__select_active');
+        // $('.quiz__select_active').removeClass('quiz__select_active');
 
         switch(next) {
             case '+1':
@@ -117,6 +116,7 @@
                 finishQuiz();
                 break;
             case 'finally':
+                $('.quiz__img').attr('src',getImageUrl(selectOptions,current));
                 $('.quiz_' + current).hide();
                 $('.quiz_' + next).show();
                 var items = $('.quiz__active-item');
@@ -125,19 +125,20 @@
                 });
                 break;
             case 'revert':
-                $('.quiz_finally').hide();
-                $('.quiz_4').show();
-                var items = $('.quiz__active-item_full');
-                Array.prototype.forEach.call(items, function(item){
-                    $(item).removeClass('quiz__active-item_full');
-                });
+                quizClose();
                 break;
             default:
+                selectOptions[current - 1] = $('.quiz_' + current + ' .quiz__select_active').data('pic');
+                if(+current < 4) {
+                    selectOptions[current] = $('.quiz_' + (+current + 1) + ' .quiz__select:first-child').data('pic');
+                    $('.quiz_' + (+current + 1) + ' .quiz__select:first-child').addClass('quiz__select_active');
+                }
                 $('.quiz_' + current).hide();
                 $('.quiz_' + next).show();
                 if(current > next) {
                     $(markers[current-1]).removeClass('quiz__active-item_cur');
                 } else {
+                    $('.quiz__img').attr('src',getImageUrl(selectOptions,current+1));
                     $(markers[current]).addClass('quiz__active-item_cur');
                 }
             break;
@@ -146,8 +147,12 @@
     });
 
     $('.quiz__select').on('click', function(e){
+        var current = $(this).closest('.quiz__question').data('cur');
+        var selector = $('.quiz_' + current + ' .quiz__select_active');
         e.preventDefault();
-        $('.quiz__select_active').removeClass('quiz__select_active');
+        selectOptions[current - 1] = $(this).data('pic');
+        $('.quiz__img').attr('src',getImageUrl(selectOptions,+current));
+        selector.removeClass('quiz__select_active');
         $(this).addClass('quiz__select_active');
 
     });
@@ -207,8 +212,8 @@
     function quizShow() {
         selectOptions = [];
         var src = $('.quiz__img').attr('src');
-        if (src != 'img/quiz_img/003.png') {
-            $('.quiz__img').attr('src', 'img/quiz_img/003.png');
+        if (src != (quiz_path + '003.png')) {
+            $('.quiz__img').attr('src', quiz_path + '003.png');
         }
         $('.quiz_1 .quiz__select:first-child').addClass('quiz__select_active');
         $('body').addClass('quiz_open');
@@ -218,6 +223,12 @@
         $('body').removeClass('quiz_open');
         $('.quiz').removeClass('quiz_opened');
         var items = $('.quiz__active-item_full');
+        var itemsActive = $('.quiz__select_active');
+
+        Array.prototype.forEach.call(itemsActive, function(item){
+            $(item).removeClass('quiz__select_active');
+        });
+
         Array.prototype.forEach.call(items, function(item){
             $(item).removeClass('quiz__active-item_full');
         });
@@ -225,16 +236,16 @@
 
     function getImageUrl(arr, page){
         switch(page){
-            case '1':
-                return 'img/quiz/' + arr[0]+'.png';
-            case '2':
-                return 'img/quiz/' + arr[1] + '_' + arr[0]+'.png';
-            case '3':
-                return 'img/quiz/' + arr[1] + '_' + arr[2] + '_' + arr[0]+'.png';
-            case '4':
-                return 'img/quiz/' + arr[1]+ '_' + arr[3] + '_' + arr[2] + '_' + arr[0]+'.png';
+            case 1:
+                return quiz_path + arr[0]+'.png';
+            case 2:
+                return quiz_path + arr[1] + '_' + arr[0]+'.png';
+            case 3:
+                return quiz_path + arr[1] + '_' + arr[2] + '_' + arr[0]+'.png';
+            case 4:
+                return quiz_path + arr[1]+ '_' + arr[3] + '_' + arr[2] + '_' + arr[0]+'.png';
             default:
-                return 'img/quiz/' + arr[1]+ '_' + arr[3] + '_' + arr[2] + '_' + arr[0]+'.png';
+                return quiz_path + arr[1]+ '_' + arr[3] + '_' + arr[2] + '_' + arr[0]+'.png';
         }
 
     }
@@ -260,7 +271,7 @@
             $('#yourName').show();
             $('#yourNumber').show();
             $('#btnBlock').show();
-        }, 5000);
+        }, 3000);
     }
 
 })(jQuery);

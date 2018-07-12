@@ -683,8 +683,13 @@ a:focus {
     justify-content: space-between;
     width: 45%;
     height:100%;
+    display:none;
+}
+.cases_opened  .cases__info-block {
     display: inline-flex;
 }
+
+
 .cases__info-block_long {
     width:54%;
 }
@@ -1430,12 +1435,13 @@ a:focus {
 }
 
 .quiz__img-block {
-    padding: 7rem 2rem 7rem 12rem;
+    padding: 5rem 0;
     border: 1px solid #dcdcdc;
+    height:100%;
 }
 
 .quiz__img{
-    width: 90%
+    width: 100%
 }
 
 .quiz__active-block {
