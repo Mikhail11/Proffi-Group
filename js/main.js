@@ -250,28 +250,81 @@
 
     }
 
+    function formSend() {
+        var num = $('#number').val();
+        var name = $('#name').val();
+        var email = $('#email').val();
+        var comment = $('#comment').val();
 
-    function send(obj, callback) {
-      /*отправка данных на сервер*/
+        if(name && (num || email)) {
+            send({
+                name: name,
+                number: num,
+                email: email,
+                comment: comment
+            }, function(){
+                $('#number').val('');
+                $('#name').val('');
+                $('#email').val('');
+                $('#comment').val('');
+                $('.feedback__sub-header').text('Заявка успешно отправлена!');
+                setTimeout(function(){
+                    $('.feedback__sub-header').text('Мы свяжемся с вами в течение часа');
+                }, 3000);
+            })
+        }
+
+    }
+
+    function send(obj, callback, error) {
+        var path =  $('body').data('path');
+        $.ajax({
+            url: path + 'send.php',
+            method: 'POST',
+            data: obj,
+            success:callback,
+            error: error
+        });
     }
 
     function finishQuiz() {
-        $('#finText').text('Ваша заявка на лестницу успешно отправлена!');
-        $('.quiz__content-items_stretch').attr('style', 'align-self:flex-start');
-        $('#yourName').hide();
-        $('#yourNumber').hide();
-        $('#btnBlock').hide();
-        setTimeout(function() {
-            $('#finText').text('Оставьте заявку, чтобы наши менеджеры обсудили с вами все детали.<br/>' +
-            'Если не нашли для себя подходящего варианта свяжитесь и мы поможем!');
-            quizClose();
-            $('.quiz__content-items_stretch').removeAttr('style');
-            $('.quiz_finally').hide();
-            $('.quiz_1').show();
-            $('#yourName').show();
-            $('#yourNumber').show();
-            $('#btnBlock').show();
-        }, 3000);
+        var num = $('#yourName').val();
+        var name = $('#yourNumber').val();
+
+        if(num && name) {
+            send({
+                name: name,
+                number: num,
+                type: selectOptions[0],
+                material: selectOptions[1],
+                base: selectOptions[2],
+                safety:[3]
+            },
+            function(){
+                $('#finText').text('Ваша заявка на лестницу успешно отправлена!');
+                $('.quiz__content-items_stretch').attr('style', 'align-self:flex-start');
+                $('#yourName').hide();
+                $('#yourNumber').hide();
+                $('#btnBlock').hide();
+                $('#yourNumber').val('');
+                $('#yourName').val('');
+                setTimeout(function() {
+                    $('#finText').text('Оставьте заявку, чтобы наши менеджеры обсудили с вами все детали.<br/>' +
+                        'Если не нашли для себя подходящего варианта свяжитесь и мы поможем!');
+                    quizClose();
+                    $('.quiz__content-items_stretch').removeAttr('style');
+                    $('.quiz_finally').hide();
+                    $('.quiz_1').show();
+                    $('#yourName').show();
+                    $('#yourNumber').show();
+                    $('#btnBlock').show();
+                }, 3000);
+            },
+            quizClose
+            )
+        }
+
+
     }
 
 })(jQuery);

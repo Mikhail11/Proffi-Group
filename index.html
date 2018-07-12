@@ -18,7 +18,7 @@
     <link href="css/style_mobile.css" rel="stylesheet">
 
 </head>
-<body>
+<body data-path="">
 <div id="preloader">
     <div id="load">
         <div class="loaderInner"></div>
@@ -91,8 +91,8 @@
             <span class="intro__header-mobile">
                 Закажите замер и получите 2 варианта дизайна в подарок!
             </span>
-            <a class="intro__button_mobile btn btn_yellow">ДАЙТЕ ДВЕ</a>
-            <a class="intro__button_mobile intro__button_mobile-last btn btn_yellow-brd">ЗАЯВКА</a>
+            <a href="#callback" class="intro__button_mobile btn btn_yellow">ДАЙТЕ ДВЕ</a>
+            <a href="#callback" class="intro__button_mobile intro__button_mobile-last btn btn_yellow-brd">ЗАЯВКА</a>
             <a href="#skills"><img src="img/intro/shewron.png"  class="intro__shewron-mobile"></a>
         </div>
     </div>
@@ -106,7 +106,7 @@
             <span class="intro__text-block intro__text-block_sub-head">
                 Производство лестниц в Казани
             </span>
-            <a class="intro__button btn btn_white">Заказать</a>
+            <a href="#callback" class="intro__button btn btn_white">Заказать</a>
             <div class="intro__image-block"></div>
         </div>
         <div class="skills flexible">
@@ -449,7 +449,7 @@
         </div>
     </div>
 </section>
-<section class="section flexible">
+<section class="section flexible" id="callback">
     <div class="section__content">
         <div class="feedback">
             <span class="feedback__header header">Оставьте заявку</span>
@@ -457,10 +457,10 @@
             <div class="feedback__content flexible">
                 <div class="feedback__content-item">
                     <form  class="form flexible" method="post">
-                        <input name="name" class="form__input"  placeholder="Ваше имя"/>
-                        <input name="number" class="form__input"  placeholder="Номер телефона"/>
-                        <input name="email" class="form__input"  placeholder="Электронная почта"/>
-                        <textarea name="comment" id=""  rows="10" class="form__input form__input_textarea" placeholder="Комментарий"></textarea>
+                        <input id="name" class="form__input"  placeholder="Ваше имя"/>
+                        <input id="number" class="form__input"  placeholder="Номер телефона"/>
+                        <input id="email" class="form__input"  placeholder="Электронная почта"/>
+                        <textarea id="comment" rows="10" class="form__input form__input_textarea" placeholder="Комментарий"></textarea>
                     </form>
                 </div>
                 <div class="feedback__content-item feedback__content-item_stretch">
