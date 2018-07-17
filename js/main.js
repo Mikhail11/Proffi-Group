@@ -125,6 +125,11 @@
                 });
                 break;
             case 'revert':
+                $(markers[1]).removeClass('quiz__active-item_cur');
+                $(markers[2]).removeClass('quiz__active-item_cur');
+                $(markers[3]).removeClass('quiz__active-item_cur');
+                $('.quiz_finally').hide();
+                $('.quiz_1').show();
                 quizClose();
                 break;
             default:
@@ -249,6 +254,9 @@
         }
 
     }
+    $('.feedback__button').on('click', function(){
+        formSend();
+    });
 
     function formSend() {
         var num = $('#number').val();
@@ -298,7 +306,7 @@
                 type: selectOptions[0],
                 material: selectOptions[1],
                 base: selectOptions[2],
-                safety:[3]
+                safety:selectOptions[3]
             },
             function(){
                 $('#finText').text('Ваша заявка на лестницу успешно отправлена!');

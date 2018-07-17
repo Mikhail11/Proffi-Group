@@ -73,6 +73,7 @@ html {
 
 body {
     font-family: 'FuturaDemiC', sans-serif;
+    background-color: #fbfbfb;
 }
 
 /* хром, сафари */
@@ -169,14 +170,15 @@ a:focus {
 .navbar {
     width: 100%;
     padding: 1.4rem 5rem;
-    box-shadow: 2px 2px 4px 2px #b3b0b0;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
     border-bottom: 1px solid rgba(255, 255, 255, .3);
-    background-color: #fff;
+    background-color: #fbfbfb;
     align-items: baseline;
     -webkit-box-align: baseline;
     -webkit-align-items: baseline;
     -ms-flex-align: baseline;
     margin-bottom: 0;
+    font-family:'FuturaMediumC', sans-serif;
 }
 
 .navbar_fixed-top {
@@ -212,7 +214,6 @@ a:focus {
 }
 
 .navbar-mobile__overlay_open {
-    /*display:block;*/
     width:100%;
 
 }
@@ -236,6 +237,7 @@ a:focus {
     justify-content:flex-end;
     font-size: 1.4rem;
     list-style-type: none;
+    font-family:'FuturaMediumC', sans-serif;
 
 }
 
@@ -312,11 +314,12 @@ a:focus {
 /* button */
 
 .btn {
-    font-size: 1rem;
+    font-size: 1.4rem;
     border: 1px solid #000000;
     border-radius: 1.45rem;
     padding: 0.72rem 1.7rem;
     line-height: 1.4;
+    font-family:'FuturaMediumC', sans-serif;
 }
 
 .btn_yellow {
@@ -350,7 +353,7 @@ a:focus {
 .section {
     width: 100%;
     padding: 3rem 0;
-    background-color: #fff;
+    background-color: #fbfbfb;
     flex-direction: column;
 }
 
@@ -397,8 +400,8 @@ a:focus {
 }
 
 .intro__text-block_head {
-    font-size: 2.3rem;
-    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 3rem;
     left: 3.1rem;
     top: 5.4rem;
 }
@@ -406,6 +409,7 @@ a:focus {
 .intro__text-block_sub-head {
     font-size: 1.73rem;
     top: 16rem;
+    font-family:'FuturaMediumC', sans-serif;
 }
 
 .intro__image-block {
@@ -413,14 +417,15 @@ a:focus {
     float: right;
     width: 65%;
     background-image: url("../img/intro/0011.png");
-    background-size: contain;
+    background-size: cover;
 }
 
 .intro__button {
     left: 3.1rem;
-    top: 22rem;
+    top: 24rem;
     position: absolute;
     padding: 0.72rem 3.3rem;
+    text-transform: uppercase;
 }
 
 .intro_mobile {
@@ -498,13 +503,19 @@ a:focus {
 
 .skills__item {
     width: 23rem;
+    -webkit-box-pack:center;
+    -ms-flex-pack:center;
+    justify-content:center
+
 }
 
 .skills_text {
     display: inline-block;
-    width: 16.4rem;
+    width: 13.4rem;
     font-size: 1.1rem;
     line-height: 1.8;
+    font-family: "Proxima Nova Rg'", sans-serif;
+
 }
 
 .skills__icon {
@@ -543,8 +554,9 @@ a:focus {
 
 .projects__sub-header {
     display: inline-block;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     width: 66rem;
+    font-family:'Proxima Nova Rg', sans-serif;
 }
 
 .projects__preview {
@@ -588,28 +600,30 @@ a:focus {
 }
 
 .projects__preview-btn {
-    margin-top: 1.5rem;
+    margin-top: 1.1rem;
     font-size: 1.4rem;
     padding: 0.5rem 2.9rem;
+    text-transform:uppercase;
 }
 
 .projects__preview-text {
     margin: 12rem auto 0;
-    font-weight: 600;
+    font-weight: normal;
     color: #fff;
-    font-size: 2.6rem;
+    font-size: 2.1rem;
     display: block;
     text-align: center;
+    font-family: 'FuturaDemiC', sans-serif;
 }
 
 .projects__preview-text::before {
-    content: '<<';
-    font-size: 1.5rem;
+    content: '«';
+    font-size: 2.1rem;
 }
 
 .projects__preview-text::after {
-    content: '>>';
-    font-size: 1.5rem;
+    content: '»';
+    font-size: 2.1rem;
 }
 
 .projects__btn-group {
@@ -621,6 +635,7 @@ a:focus {
     font-size: 1.4rem;
     padding: 0.5rem 3.6rem;
     color: #000;
+    text-transform: uppercase;
 }
 
 .projects__catalog-btn:hover {
@@ -667,7 +682,7 @@ a:focus {
 }
 .cases__description {
     color: #d94b38;
-    font-family: "Proxima Nova", sans-serif;
+    font-family: "Proxima Nova Rg'", sans-serif;
     font-size: 1.2rem;
     font-weight: 400;
     line-height: 26px;
@@ -826,12 +841,12 @@ a:focus {
     width: 70rem;
     margin-top: 2.2rem;
     line-height: 1.8;
+    font-family: "Proxima Nova Rg", sans-serif;
 }
 
 .materials_offer {
     font-size: 3.45rem;
     margin-top: 3.8rem;
-    font-weight: 600;
     line-height: 1;
 }
 
@@ -858,6 +873,7 @@ a:focus {
 .materials__property-name {
     font-size: 1.5rem;
     font-weight: 400;
+    font-family: "Proxima Nova Rg", sans-serif;
 }
 
 .materials__property-scale {
@@ -872,8 +888,9 @@ a:focus {
 
 .materials__description-head {
     font-size: 1.6rem;
-    font-weight: 600;
+    font-weight: 700;
     display: block;
+    font-family: "Proxima Nova Rg", sans-serif;
 }
 
 .materials__description-content {
@@ -882,6 +899,7 @@ a:focus {
     width: 37rem;
     margin-top: 1.8rem;
     display: block;
+    font-family: "Proxima Nova Rg", sans-serif;
 }
 
 
@@ -964,6 +982,7 @@ a:focus {
     margin-top: 2.2rem;
     line-height: 1.5;
     text-transform: uppercase;
+    font-family: "Proxima Nova Rg", sans-serif;
 }
 
 .safety__description {
@@ -972,6 +991,7 @@ a:focus {
     width: 33rem;
     margin-top: 2.2rem;
     line-height: 1.5;
+    font-family: "Proxima Nova Rg", sans-serif;
 }
 
 .safety__info-block {
@@ -988,6 +1008,7 @@ a:focus {
     font-size: 2.5rem;
     text-transform: uppercase;
     color:#fff;
+    font-family: "Proxima Nova Rg", sans-serif;
 }
 
 .safety__properties {
@@ -998,7 +1019,7 @@ a:focus {
 .safety__properties-item {
     width: 29.1rem;
     height: 29.1rem;
-    box-shadow: 1px 1px 2px 1px #e8e4e4;
+    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.07);
     padding: 2.7rem 2.36rem;
     text-align: center;
 }
@@ -1012,8 +1033,12 @@ a:focus {
     margin-top: 4.56rem;
     font-size: 1.3rem;
     display:block;
+    font-family: "Proxima Nova Rg", sans-serif;
 }
 
+.safety__properties-item:nth-child(2)  .safety__properties-text{
+    margin-top: 3.7rem;
+}
 /* history */
 
 .history {
@@ -1037,6 +1062,7 @@ a:focus {
     margin-top: 4.8rem;
     line-height: 1;
     color:#fff;
+    font-family: 'FuturaDemiC', sans-serif;
 }
 
 .history__sub-header {
@@ -1047,6 +1073,7 @@ a:focus {
     line-height: 1.5;
     text-transform: uppercase;
     color:#fff;
+    font-family: "Proxima Nova Rg", sans-serif;
 }
 
 .history__info-block {
@@ -1055,6 +1082,7 @@ a:focus {
     height: 15.4rem;
     background-color: #fff;
     padding: 1.4rem 2.4rem;
+    font-family: "Proxima Nova Rg", sans-serif;
 }
 
 .history__info-text {
@@ -1090,6 +1118,8 @@ a:focus {
     width: 59rem;
     margin-top: 2.2rem;
     line-height: 1.5;
+    font-family: 'FuturaDemiC', sans-serif;
+    color: #46443f;
 }
 
 .workflow__quality {
@@ -1197,6 +1227,7 @@ a:focus {
     width: 30.2rem;
     display: block;
     font-size: 1.3rem;
+    font-family: "Proxima Nova Rg", sans-serif;
 }
 
 .logistic-footer {
@@ -1214,6 +1245,7 @@ a:focus {
 .logistic-footer__slogan-text {
     color:#fff;
     font-size: 2.5rem;
+    font-family: "Proxima Nova Rg", sans-serif;
 }
 
 .logistic-footer__symbols {
@@ -1238,6 +1270,7 @@ a:focus {
     text-align: center;
     width:90%;
     margin: 0 auto;
+    font-family: "Proxima Nova Rg", sans-serif;
 }
 
 
@@ -1332,6 +1365,9 @@ a:focus {
     width: 59rem;
     margin-top: 7.2rem;
     line-height: 1.5;
+    font-family: "Proxima Nova Rg", sans-serif;
+    font-weight: 700;
+    color: #46443f;
 }
 
 .feedback_drag-drop-img {
@@ -1358,7 +1394,7 @@ a:focus {
 }
 .feedback__text {
     color: rgba(70, 68, 63, 0.7);
-    font-family: "Proxima Nova", sans-serif;
+    font-family: "Proxima Nova Rg'", sans-serif;
     font-size: 1.4rem;
     font-weight: 400;
     line-height: 29px;
@@ -1576,7 +1612,7 @@ a:focus {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    font-family: "Proxima Nova Rg", sans-serif;
 }
 
 .form__input {
@@ -1585,7 +1621,7 @@ a:focus {
     height: 4rem;
     border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
-    font-family: "Proxima Nova", sans-serif;
+    font-family: "Proxima Nova Rg", sans-serif;
     font-size: 1.4rem;
     font-weight: 400;
     margin-top: 2.6rem;
@@ -1630,7 +1666,7 @@ a:focus {
 }
 
 .iconed-list__item-text {
-    font-family: "Proxima Nova", sans-serif;
+    font-family: "Proxima Nova Rg", sans-serif;
     font-size: 1.5rem;
     font-weight: 400;
     display: inline-block;

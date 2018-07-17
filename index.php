@@ -32,19 +32,19 @@
             <span class="skills__header">
                 Почему вам стоит с нами работать
             </span>
-                <div class="skills__item">
+                <div class="skills__item flexible">
                     <div class="skills__icon icon-time"></div>
                     <span class="skills_text">
                     <?php the_field('blck_1_quality_1'); ?>
                 </span>
                 </div>
-                <div class="skills__item">
+                <div class="skills__item flexible">
                     <div class="skills__icon icon-five"></div>
                     <span class="skills_text">
                     <?php the_field('blck_1_quality_2'); ?>
                 </span>
                 </div>
-                <div class="skills__item">
+                <div class="skills__item flexible">
                     <div class="skills__icon icon-tool"></div>
                     <span class="skills_text">
                     <?php the_field('blck_1_quality_3'); ?>
