@@ -402,22 +402,24 @@
                         </li>
                         <li class="iconed-list__item">
                             <img src="<?= bloginfo('template_directory'); ?>/img/contacts/mail.svg" class="iconed-list__item-img">
-                            <span class="iconed-list__item-text">mail@proffigroup.com</span>
+                            <span class="iconed-list__item-text">info@proffigroup.com</span>
                         </li>
                     </ul>
 
                     <ul class="contacts__list iconed-list">
                         <li class="iconed-list__item">
-                            <a href="https://vk.com/proffigroup_kzn" target="_blank"><img href="https://vk.com/proffigroup_kzn" src="<?= bloginfo('template_directory'); ?>/img/contacts/vk.svg" class="iconed-list__item-img"></a>
-                            <span class="iconed-list__item-text">vk.com/proffigroup_kzn</span>
+                            <a href="https://vk.com/lestnica_kazan" target="_blank"><img href="https://vk.com/lestnica_kazan
+
+" src="<?= bloginfo('template_directory'); ?>/img/contacts/vk.svg" class="iconed-list__item-img"></a>
+                            <span class="iconed-list__item-text">vk.com/lestnica_kazan</span>
                         </li>
                         <li class="iconed-list__item">
                             <a href="https://ok.ru/pg_kzn" target="_blank"><img src="<?= bloginfo('template_directory'); ?>/img/contacts/fb.svg" class="iconed-list__item-img"></a>
                             <span class="iconed-list__item-text">ok.ru/pg_kzn</span>
                         </li>
                         <li class="iconed-list__item">
-                            <a href="https://facebook.com/proffi_group" target="_blank"><img src="<?= bloginfo('template_directory'); ?>/img/contacts/ok.svg" class="iconed-list__item-img"></a>
-                            <span class="iconed-list__item-text">facebook.com/proffi_group</span>
+                            <a href="https://facebook.com/lestnici.v.kazani target="_blank"><img src="<?= bloginfo('template_directory'); ?>/img/contacts/ok.svg" class="iconed-list__item-img"></a>
+                            <span class="iconed-list__item-text">facebook.com/lestnici.v.kazani</span>
                         </li>
                     </ul>
                 </div>
