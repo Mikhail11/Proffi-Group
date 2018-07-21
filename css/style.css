@@ -73,7 +73,7 @@ html {
 
 body {
     font-family: 'FuturaDemiC', sans-serif;
-    background-color: #fbfbfb;
+    background-color: #fff;
 }
 
 /* хром, сафари */
@@ -172,7 +172,7 @@ a:focus {
     padding: 1.4rem 5rem;
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
     border-bottom: 1px solid rgba(255, 255, 255, .3);
-    background-color: #fbfbfb;
+    background-color: #f6f6f6;
     align-items: baseline;
     -webkit-box-align: baseline;
     -webkit-align-items: baseline;
@@ -316,7 +316,7 @@ a:focus {
 .btn {
     font-size: 1.4rem;
     border: 1px solid #000000;
-    border-radius: 1.45rem;
+    border-radius: 2rem;
     padding: 0.72rem 1.7rem;
     line-height: 1.4;
     font-family:'FuturaMediumC', sans-serif;
@@ -353,7 +353,7 @@ a:focus {
 .section {
     width: 100%;
     padding: 3rem 0;
-    background-color: #fbfbfb;
+    background-color: #fff;
     flex-direction: column;
 }
 
@@ -374,6 +374,15 @@ a:focus {
 
 .section__content_long {
     width:110rem;
+}
+
+.section__content_grey {
+    width:100%;
+    background-color: #f6f6f6;
+    justify-content: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+
 }
 
 .section__content_collapse {
@@ -546,6 +555,9 @@ a:focus {
 }
 
 /* projects */
+.projects {
+    margin-top: 5rem;
+}
 
 .projects__header {
     margin-left: -3px;
@@ -634,12 +646,7 @@ a:focus {
 .projects__catalog-btn {
     font-size: 1.4rem;
     padding: 0.5rem 3.6rem;
-    color: #000;
     text-transform: uppercase;
-}
-
-.projects__catalog-btn:hover {
-    color: #000;
 }
 
 /* cases */
@@ -862,7 +869,7 @@ a:focus {
 }
 
 .materials__property {
-    margin-top: 2.8rem;
+    margin-bottom: 3.8rem;
     display:inline-block;
 }
 
@@ -1296,34 +1303,40 @@ a:focus {
     display:block;
 }
 
-.team__persons {
-    -webkit-justify-content: space-around;
-    justify-content: space-around;
+.team__persons,
+.team__sub-persons {
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
     margin-top: 5.5rem;
 }
 
 .team__persons-item {
     text-align:center;
+    margin-left: 1rem;
+}
+
+.team__person-info {
+    margin-left: 2rem;
 }
 
 .team__person-img {
-    width:18rem;
+    width:21rem;
 }
 
 .team__person-name {
     display: block;
-    text-align: center;
+    text-align: left;
     font-size: 2.1rem;
-    color:#fff;
+    color:#000;
     font-family: 'FuturaDemiC', sans-serif;
     margin-top: 2rem;
 }
 
 .team__person-speciality {
     display: block;
-    text-align: center;
+    text-align: left;
     font-size: 1.2rem;
-    color:#fff;
+    color:#000;
     font-family: 'Proxima Nova Rg', sans-serif;
 
 }
@@ -1350,6 +1363,19 @@ a:focus {
     margin-right:0;
 }
 
+.team__sub-persons .team__person-img {
+    width: 14rem;
+}
+
+.team__sub-persons .team__person-name {
+    font-size: 1.6rem;
+}
+
+.team__sub-persons .team__person-speciality{
+    font-size: 1rem;
+}
+
+
 /* feedback */
 
 .feedback__header {
@@ -1359,11 +1385,15 @@ a:focus {
     display:block;
 }
 
+.feedback_sub-block {
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
 .feedback__sub-header {
     display: block;
     font-size: 2.5rem;
     width: 59rem;
-    margin-top: 7.2rem;
     line-height: 1.5;
     font-family: "Proxima Nova Rg", sans-serif;
     font-weight: 700;
@@ -1673,6 +1703,23 @@ a:focus {
     display: inline-block;
 }
 
+
+/* modificators */
+.marged {
+    margin-top: 4rem;
+}
+
+.not_marged {
+    margin:0;
+}
+
+.width-fixed {
+    max-width: 11rem;
+}
+.not_padded {
+    padding:0;
+}
+
 /* styles for support */
 
 .backgrounded {
@@ -1698,7 +1745,7 @@ a:focus {
 .wood {
     position: absolute;
     right: 0;
-    top: 17rem;
+    top: 13rem;
     background-image: url("../img/materials/wood.png");
     height: 67rem;
     width: 38.1rem;
