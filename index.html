@@ -18,7 +18,7 @@
     <link href="css/style_mobile.css" rel="stylesheet">
 
 </head>
-<body data-path="" class="cases_open">
+<body data-path="img/">
 <div id="preloader">
     <div id="load">
         <div class="loaderInner"></div>
@@ -148,21 +148,21 @@
                         <img src="img/preview/pic 1.png" class="projects__preview-img">
                         <div class="projects__preview-shade">
                             <span class="projects__preview-text">Персефона</span>
-                            <a class="projects__preview-btn btn btn_yellow-brd">подробнее</a>
+                            <a class="projects__preview-btn btn btn_yellow-brd" data-current="0">подробнее</a>
                         </div>
                     </div>
                     <div class="projects__preview-item">
                         <img src="img/preview/pic 2.png" class="projects__preview-img">
                         <div class="projects__preview-shade">
                             <span class="projects__preview-text">Дионис</span>
-                            <a class="projects__preview-btn btn btn_yellow-brd">подробнее</a>
+                            <a class="projects__preview-btn btn btn_yellow-brd" data-current="1">подробнее</a>
                         </div>
                     </div>
                     <div class="projects__preview-item">
                         <img src="img/preview/pic 3.png" class="projects__preview-img">
                         <div class="projects__preview-shade">
                             <span class="projects__preview-text">Афина</span>
-                            <a class="projects__preview-btn btn btn_yellow-brd">подробнее</a>
+                            <a class="projects__preview-btn btn btn_yellow-brd" data-current="2">подробнее</a>
                         </div>
                     </div>,
                 </div>
@@ -171,21 +171,21 @@
                         <img src="img/preview/pic 4.png" class="projects__preview-img">
                         <div class="projects__preview-shade">
                             <span class="projects__preview-text">Филарета</span>
-                            <a class="projects__preview-btn btn btn_yellow-brd">подробнее</a>
+                            <a class="projects__preview-btn btn btn_yellow-brd" data-current="3">подробнее</a>
                         </div>
                     </div>
                     <div class="projects__preview-item">
                         <img src="img/preview/pic 5.png" class="projects__preview-img">
                         <div class="projects__preview-shade">
                             <span class="projects__preview-text">Эскада</span>
-                            <a class="projects__preview-btn btn btn_yellow-brd">подробнее</a>
+                            <a class="projects__preview-btn btn btn_yellow-brd" data-current="4">подробнее</a>
                         </div>
                     </div>
                     <div class="projects__preview-item">
                         <img src="img/preview/pic 6.png" class="projects__preview-img">
                         <div class="projects__preview-shade">
                             <span class="projects__preview-text">Фемида</span>
-                            <a class="projects__preview-btn btn btn_yellow-brd">подробнее</a>
+                            <a class="projects__preview-btn btn btn_yellow-brd" data-current="5">подробнее</a>
                         </div>
                     </div>
                 </div>
@@ -586,16 +586,20 @@
             <a class="btn btn_yellow-brd preview-mobile__btn">Назад</a>
         </div>
     </section>
-<section class="cases flexible cases_opened">
-    <div class="cases__info flexible">
-        <span class="cases__header header" id="cHeader">Афина</span>
-        <span class="cases__description" id="cDescr1">Лестница изготовлена из дуба и покрашена
+<section class="cases flexible">
+    <div class="cases__info cases__position flexible">
+        <span class="cases__back-button"><img src="img/opened_cases/buttonBack.png" alt="" class="cases__btn-img"></span>
+        <div class="flexible cases__position">
+            <span class="cases__header header" id="cHeader">Афина</span>
+            <span class="cases__description" id="cDescr1">Лестница изготовлена из дуба и покрашена
             в белый цвет с применением технологии патинирования.
             В подлестничное пространство вмонтирован шкаф.</span>
-        <span class="cases__description" id="cDescr2">Перед нами стояла задача создать лестницу для комнаты отдыха.
+            <span class="cases__description" id="cDescr2">Перед нами стояла задача создать лестницу для комнаты отдыха.
             Заказчик хотел, чтобы лестница вписывалась в атмосферу комнаты, для этого было принято решение сделать светлую лестницу с эффектом «старины».</span>
+        </div>
+        <span class="cases__btn btn btn_yellow">ХОЧУ ТАК ЖЕ!</span>
     </div>
-    <div class="cases__image" style="background-image: url(img/opened_cases/pic_3.jpg)">
+    <div class="cases__image" id="cImage" style="background-image: url(img/opened_cases/pic_3.jpg)">
 
     </div>
 </section>
@@ -694,6 +698,7 @@
 
 <!-- Core JavaScript Files -->
 <script src="js/main.js"></script>
+<script src="js/cases.js"></script>
 
 <!-- Drag and Drop upload -->
 <script src="js/upload.js"></script>

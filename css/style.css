@@ -676,8 +676,12 @@ a:focus {
 }
 
 .cases__info {
-    padding: 3rem 5.6rem 7rem;
+    padding: 3rem 5.6rem 5rem;
     width:34%;
+    height:100%;
+}
+
+.cases__position {
     -webkit-box-orient:vertical;
     -webkit-box-direction:normal;
     -ms-flex-direction:column;
@@ -692,7 +696,17 @@ a:focus {
     background-size: cover;
 }
 
+.cases__description {
+    font-family: "Proxima Nova Rg", sans-serif;
+    font-size: 1.3rem;
+    font-weight:normal;
+    line-height: 2rem;
+    margin-top: 2rem;
+}
+.cases__back-button {
+    cursor: pointer;
 
+}
 
 
 /* preview mobile */

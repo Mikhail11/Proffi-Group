@@ -7,14 +7,6 @@
         });
     }
 
-    $('.projects__preview').on('click', function(event){
-        if($(event.target).hasClass('projects__preview-btn')) {
-            $('body').addClass('cases_open');
-            $('.cases').addClass('cases_opened');
-            event.stopImmediatePropagation();
-        }
-    });
-
     $('.preview-mobile__btn').on('click', function(event){
         $('body').removeClass('cases_open');
         $('.preview-mobile').removeClass('preview-mobile_opened');
@@ -104,9 +96,6 @@
 
         markers = Array.prototype.map.call(markers, function(item){ return item});
 
-
-
-        // $('.quiz__select_active').removeClass('quiz__select_active');
 
         switch(next) {
             case '+1':
