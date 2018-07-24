@@ -630,12 +630,32 @@
     html {
         font-size: 14px;
     }
+
+    .navbar {
+        padding: 1.4rem 2rem;
+    }
+
+    .logistic {
+        margin-left: 2rem;
+    }
+
+    .navbar__list {
+        width:88rem;
+    }
 }
 
 @media (max-width: 1600px) {
 
     html {
         font-size: 12px;
+    }
+
+    .navbar {
+        padding: 1.4rem 2rem;
+    }
+
+    .navbar__list {
+        width:86rem;
     }
 }
 
