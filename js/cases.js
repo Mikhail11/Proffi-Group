@@ -16,7 +16,7 @@
                 "использовали дальневосточный ясень.\n" +
                 "Подступенки и боковые зашивки были\n" +
                 "изготовлены из шпонированного МДФ",
-               cImage: "opened_cases/pic_1.jpg"
+               cImage: "opened_cases/pic_1.svg"
            },
 
            {
@@ -29,7 +29,7 @@
                "ступеней, поручней и заполнения балюстрады\n" +
                "второго этажа мы выбрали прочный и фактурный\n" +
                "ясень",
-               cImage: "opened_cases/pic_2.jpg"
+               cImage: "opened_cases/pic_2.svg"
            },
 
            {
@@ -43,7 +43,7 @@
                "вписывалась в атмосферу комнаты, для этого\n" +
                "было принято решение сделать светлую\n" +
                "лестницу с эффектом «старины».",
-               cImage: "opened_cases/pic_3.jpg"
+               cImage: "opened_cases/pic_3.svg"
            },
 
            {
@@ -55,7 +55,7 @@
                cDescr2: "В конструкции лестницы на бетонном каркасе\n" +
                "отсутствуют полости, поэтому она не скрипит, а\n" +
                "также не издает гулких звуков при ходьбе",
-               cImage: "opened_cases/pic_4.jpg"
+               cImage: "opened_cases/pic_4.svg"
            },
 
            {
@@ -71,7 +71,7 @@
                "захотел самостоятельно сделать резной\n" +
                "подступенок. Мы предоставили ему доску, на\n" +
                "которой он сделал резьбу самостоятельно.",
-                cImage: "opened_cases/pic_5.jpg"
+                cImage: "opened_cases/pic_5.svg"
            },
 
            {
@@ -85,7 +85,7 @@
                "лестниц. Боковая зашивка и подступенки\n" +
                "изготовлены из МДФ и покрыты натуральным\n" +
                "шпоном.",
-               cImage: "opened_cases/pic_6.jpg"
+               cImage: "opened_cases/pic_6.svg"
            }
 
 
@@ -116,6 +116,62 @@
             setPrewiew(event.target);
             event.stopImmediatePropagation();
         }
+    });
+
+
+    var navItems = $('.preview-mobile__navs-item');
+    var mobilePreview = [
+        {
+            mHeader: 'Персефона',
+            mImg: 'opened_cases_mbl/pic1.jpg'
+        },
+        {
+            mHeader: 'Дионис',
+            mImg: 'opened_cases_mbl/pic2.jpg'
+        },
+        {
+            mHeader: 'Афина',
+            mImg: 'opened_cases_mbl/pic3.jpg'
+        },
+        {
+            mHeader: 'Филарета',
+            mImg: 'opened_cases_mbl/pic4.jpg'
+        },
+        {
+            mHeader: 'Эскада',
+            mImg: 'opened_cases_mbl/pic5.jpg'
+        },
+        {
+            mHeader: 'Фемида',
+            mImg: 'opened_cases_mbl/pic6.jpg'
+        }
+    ];
+    var cur = 0;
+
+    function setPreview(num) {
+        var path =  $('body').data('path');
+        $('#mImg').attr('src',path + mobilePreview[num].mImg);
+        $('#mHeader').text(mobilePreview[num].mHeader);
+        $('.preview-mobile__navs-item_active').removeClass('preview-mobile__navs-item_active');
+        $(navItems[num]).addClass('preview-mobile__navs-item_active');
+    }
+
+    $('.next').on('click', function() {
+        if (cur === (mobilePreview.length-1)) {
+            cur = 0;
+        } else {
+            cur++;
+        }
+        setPreview(cur);
+    });
+
+    $('.prev').on('click', function() {
+        if (cur === 0) {
+            cur = (mobilePreview.length-1);
+        } else {
+            cur--;
+        }
+        setPreview(cur);
     });
 
 })(jQuery);

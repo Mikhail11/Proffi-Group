@@ -1,3 +1,47 @@
+/*  desktops */
+
+@media (max-width: 1980px) {
+    html {
+        font-size: 14px;
+    }
+
+    .navbar {
+        padding: 1.4rem 2rem;
+    }
+
+    .logistic {
+        margin-left: 2rem;
+    }
+
+    .navbar__list {
+        width:88rem;
+    }
+}
+
+@media (max-width: 1600px) {
+
+    html {
+        font-size: 12px;
+    }
+
+    .navbar {
+        padding: 1.4rem 2rem;
+    }
+
+    .navbar__list {
+        width:86rem;
+    }
+}
+
+@media (max-width: 1400px) {
+
+    html {
+        font-size: 10px;
+    }
+}
+
+
+
 /* media queries */
 @media (max-width:767px) {
 
@@ -12,6 +56,11 @@
 
     .mobile-header {
         display:flex;
+    }
+
+    .list__item-link {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
     }
 
     /* navbar */
@@ -52,13 +101,13 @@
 
     .navbar__list .list__item {
         margin:0;
-        padding: 1.5rem 6rem;
+        padding: 1rem 4rem;
         align-self: stretch;
         border-bottom: 1px solid #dcdcdc;
     }
 
     .navbar__list .list__item .list__item-link {
-        font-size: 2rem;
+        font-size: 1.8rem;
         text-align: left;
         font-family: 'Proxima Nova Rg', sans-serif;
         text-transform: capitalize;
@@ -68,7 +117,7 @@
 
     .navbar-mobile__contacts {
         display:block;
-        padding: 1.5rem 0 1.5rem 6rem !important;
+        padding: 1rem 0 1rem 4rem !important;
     }
 
     .navbar__list .list__item:hover .list__item-underline,
@@ -135,6 +184,10 @@
         flex-direction: column-reverse;
     }
 
+    .not_reversed {
+        flex-direction: column;
+    }
+
     /*intro*/
     .intro {
         display:none;
@@ -165,6 +218,9 @@
     .skills__item {
         margin-top: 4rem;
         width:100%;
+        -webkit-box-pack:justify;
+        -ms-flex-pack:justify;
+        justify-content:space-between;
     }
     .skills__icon {
         width: 6.3rem;
@@ -172,8 +228,8 @@
         vertical-align: bottom;
     }
     .skills_text {
-        font-size: 1.7rem;
-        width: 60%;
+        font-size: 1.8rem;
+        width: 70%;
         line-height: 1.7;
         font-family: 'Proxima Nova Rg', sans-serif;
 
@@ -184,16 +240,21 @@
     }
 
     .icon-tool{
-        width:7.6rem;
+        width:5.6rem;
+        height: 4.6rem;
     }
 
     .icon-five,
     .icon-time {
-        width:7.6rem;
-        height:7.6rem;
+        width:5.6rem;
+        height:5.6rem;
     }
 
     /*projects*/
+
+    .projects__content {
+        display:none;
+    }
 
     .projects__sub-header {
         width: 100%;
@@ -240,12 +301,19 @@
         font-size: 1rem;
     }
 
+    .preview-mobile {
+        display:flex;
+    }
     /* materials  */
     .materials {
         margin-top: 0;
     }
     .materials__header {
         margin-top: 1rem;
+    }
+
+    .materials_offer {
+       font-size: 2.9rem;
     }
 
     .materials__sub-header {
@@ -443,6 +511,42 @@
         margin-top: 0;
     }
 
+    .team__sub-persons-block,
+    .team__sub-persons .team__persons-item {
+        flex-direction:column;
+    }
+
+    .team__sub-persons-block {
+        margin-top:2rem;
+    }
+
+    .team__sub-persons {
+        flex-direction: row;
+        min-height:100%;
+        margin-top: 1.5rem;
+        width:100%;
+    }
+
+    .team__sub-persons .team__person-img {
+        margin: 0;
+        align-self: center;
+        width: 11rem;
+    }
+
+
+    .team__sub-persons .team__person-speciality,
+    .team__sub-persons .team__person-name {
+        text-align: center;
+    }
+
+    .team__sub-persons .team__person-info {
+        margin: 0;
+        align-self: stretch;
+    }
+    .team__sub-persons .team__persons-item {
+        margin: 1.5rem 0 0 0;
+    }
+
     .team__person-name,
     .team__person-speciality {
         color:#000;
@@ -600,11 +704,17 @@
         background-repeat: no-repeat;
     }
 
+    .width-fixed {
+        max-width:100%;
+        width:100%;
+    }
+
     .wood {
         position: static;
         height: 38rem;
-        width: 21.1rem;
+        width: 24.1rem;
         align-self: flex-end;
+        background-image: url(../img/materials/wood_mbl.png);
     }
 }
 
@@ -624,44 +734,3 @@
     }
 }
 
-/*  desktops */
-
-@media (max-width: 1980px) {
-    html {
-        font-size: 14px;
-    }
-
-    .navbar {
-        padding: 1.4rem 2rem;
-    }
-
-    .logistic {
-        margin-left: 2rem;
-    }
-
-    .navbar__list {
-        width:88rem;
-    }
-}
-
-@media (max-width: 1600px) {
-
-    html {
-        font-size: 12px;
-    }
-
-    .navbar {
-        padding: 1.4rem 2rem;
-    }
-
-    .navbar__list {
-        width:86rem;
-    }
-}
-
-@media (max-width: 1400px) {
-
-    html {
-        font-size: 10px;
-    }
-}

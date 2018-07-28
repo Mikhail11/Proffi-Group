@@ -306,10 +306,10 @@ a:focus {
 .list__icon{
     height:2rem;
     width:2rem;
-    display: block;
     background-size: contain;
     background-repeat: no-repeat;
     display: inline-block;
+    margin-right: 1.5rem;
 }
 /* button */
 
@@ -440,11 +440,14 @@ a:focus {
 .intro_mobile {
     display:none;
     flex-direction: column;
-    justify-content: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    height:100vh;
+    justify-content: space-around;
+    height:85vh;
+    margin-top: 5vh;
 
+}
+
+.intro__logo-block {
+    flex-direction: column;
 }
 
 .intro__header-mobile {
@@ -459,14 +462,14 @@ a:focus {
 .intro__sub-header-mobile {
     display: block;
     font-family: 'Proxima Nova Rg', sans-serif;
-    font-size: 2.3rem;
+    font-size: 1.8rem;
     width: 70%;
     text-align: center;
     margin-top: 2rem;
 }
 
 .intro__img-mobile {
-    width: 30rem;
+    width: 23rem;
 }
 
 .intro__button_mobile {
@@ -489,7 +492,7 @@ a:focus {
     color:#000;
 }
 .intro__shewron-mobile {
-    width:5rem;
+    width:3rem;
     margin-top: 6rem;
 }
 /* skills*/
@@ -718,57 +721,97 @@ a:focus {
 .preview-mobile {
     width: 100%;
     height: 100%;
+    display: none;
     flex-direction: column;
-    position: fixed;
-    display: block;
-    top: -100%;
-    left: 0;
     background-color: #fff;
     padding-top: 5rem;
     z-index: 9;
     overflow: auto;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-bottom:3rem;
+}
+
+.preview-mobile__nav {
+    width:100%;
+    padding: 0 5%;
+}
+
+
+.project__info-block {
+    text-align: center;
 }
 
 .preview-mobile__content {
     flex-direction: column;
+    background-color: #f6f6f6;
+    padding:1rem 0 3rem;
 }
 
 .preview-mobile__img {
     width: 100%;
-    height: 40%;
     background-size: cover;
-    background-position-y: 50%;
-    background-repeat: no-repeat;
+    height:31rem;
 }
 
-.preview-mobile__header{
-    padding: 1rem 5%;
+.preview-mobile__nav-header{
+    font-size: 4.2rem;
+    font-family: "Proxima Nova Rg", sans-serif;
 
+}
+
+.preview-mobile__nav-btn {
+    width: 2rem;
+    height:5rem;
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.preview-mobile__nav-btn i {
+    font-style: normal;
+    line-height: 0.7;
+    vertical-align: text-top;
 }
 
 .preview-mobile__description {
-    padding: 0 5%;
     width: 100%;
     font-family: 'Proxima Nova Rg', sans-serif;
     font-size: 1.5rem;
+    margin: 2rem 0;
+    display:block;
 }
 .preview-mobile__btn{
     align-self: center;
-    color: #000;
     text-transform: uppercase;
     font-size: 2rem;
-    padding: 0.5rem 5rem;
+    padding: 0.5rem 6rem;
     border-radius: 2rem;
     margin-top: 2rem;
     font-family: 'Proxima Nova Rg', sans-serif;
     cursor: pointer;
 }
 
-.preview-mobile_opened {
-    top:0;
-    opacity:1;
-    z-index: 100;
-    transition: top, opacity 1s ease-in-out;
+.preview-mobile__btn-blc,
+.preview-mobile__btn-blc:hover {
+    color:#000;
+    border-width:3px;
+    margin-top: 1rem;
+}
+
+.preview-mobile__navs-item {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.5rem;
+    background-color: #dcdcdc;
+}
+.preview-mobile__navs {
+    width:30%;
+    margin-top: 1rem;
+}
+
+.preview-mobile__navs-item_active {
+    background-color: #E6B82E;
 }
 
 /* materials */
@@ -1246,11 +1289,20 @@ a:focus {
     display:block;
 }
 
+.team__sub-persons-block {
+    flex-direction: row;
+}
+
 .team__persons,
 .team__sub-persons {
     -webkit-justify-content: space-between;
     justify-content: space-between;
     margin-top: 5.5rem;
+}
+
+.team__sub-persons {
+    flex-direction: column;
+    min-height: 33rem;
 }
 
 .team__persons-item {
@@ -1712,4 +1764,12 @@ a:focus {
     width: 45.1rem;
     background-size: cover;
 
+}
+
+.prev::before {
+    content: '‹';
+}
+
+.next::before {
+    content: '›';
 }

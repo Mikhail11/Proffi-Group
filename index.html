@@ -84,15 +84,16 @@
 <section class="section flexible section_intro">
     <div class="section__content">
         <div class="intro_mobile flexible">
-            <img src="img/Logo.png"  class="intro__img-mobile">
-            <span class="intro__sub-header-mobile">
-                производство лестниц в Казани
-            </span>
+            <div class="flexible intro__logo-block">
+                <img src="img/Logo.png"  class="intro__img-mobile">
+                <span class="intro__sub-header-mobile">
+                    производство лестниц в Казани
+                </span>
+            </div>
             <span class="intro__header-mobile">
                 Закажите замер и получите 2 варианта дизайна в подарок!
             </span>
-            <a href="#callback" class="intro__button_mobile btn btn_yellow">ДАЙТЕ ДВЕ</a>
-            <a href="#callback" class="intro__button_mobile intro__button_mobile-last btn btn_yellow-brd">ЗАЯВКА</a>
+            <a href="#callback" class="intro__button_mobile btn btn_yellow">ЗАКАЗАТЬ</a>
             <a href="#skills"><img src="img/intro/shewron.png"  class="intro__shewron-mobile"></a>
         </div>
     </div>
@@ -136,7 +137,54 @@
     </div>
 </section>
 <section class="section flexible" id="projects">
-    <div class="section__content">
+    <section class="preview-mobile flexible">
+        <div class="section__content">
+            <div class="project__text-block">
+                <span class="preview-mobile__header header">Наши проекты</span>
+                <span class="preview-mobile__description">Наша компания создает красивые, удобные и безопасные лестницы с 2010 года. мы реализуем проекты разного масштаба: от лестниц для частных домов до уникальных проектов в сотрудничестве с лучшими дизайнерами Татарстана.</span>
+            </div>
+        </div>
+        <div class="preview-mobile__img">
+            <img id="mImg" src="img/opened_cases_mbl/pic4.jpg" alt="" width="100%" height="100%">
+        </div>
+        <div class="preview-mobile__content flexible">
+            <div class="preview-mobile__navs flexible">
+                <span class="preview-mobile__navs-item preview-mobile__navs-item_active"></span>
+                <span class="preview-mobile__navs-item"></span>
+                <span class="preview-mobile__navs-item"></span>
+                <span class="preview-mobile__navs-item"></span>
+                <span class="preview-mobile__navs-item"></span>
+                <span class="preview-mobile__navs-item"></span>
+            </div>
+            <div class="preview-mobile__nav flexible">
+                <span class="preview-mobile__nav-btn">
+                    <i class="prev"></i>
+                </span>
+                <span class="preview-mobile__nav-header" id="mHeader">Персефона</span>
+                <span class="preview-mobile__nav-btn">
+                    <i class="next"></i>
+                </span>
+            </div>
+            <div class="section__content">
+                <div class="project__info-block">
+                    <span class="preview-mobile__description">Для ступеней, поручней и столбов использовали дальневосточный ясень.
+                        Подступенки и боковые зашивки были изготовлены из шпонированного МДФ.
+                    </span>
+                    <a href="#callback" class="btn btn_yellow preview-mobile__btn">ХОЧУ ТАК ЖЕ!</a>
+
+                </div>
+            </div>
+        </div>
+        <div class="section__content project__info-block">
+            <span class="preview-mobile__description">Скачайте наш каталог, чтобы посмотреть
+больше работ:
+            </span>
+            <a href="marketing.pdf" class="btn btn_yellow-brd preview-mobile__btn preview-mobile__btn-blc">СКАЧАТЬ</a>
+        </div>
+
+    </section>
+
+    <div class="section__content projects__content">
         <div class="projects">
             <div class="project__text-block">
                 <span class="projects__header header">Наши проекты</span>
@@ -164,7 +212,7 @@
                             <span class="projects__preview-text">Афина</span>
                             <a class="projects__preview-btn btn btn_yellow-brd" data-current="2">подробнее</a>
                         </div>
-                    </div>,
+                    </div>
                 </div>
                 <div class="projects__row flexible">
                     <div class="projects__preview-item">
@@ -206,11 +254,11 @@
         </div>
     </div>
 </section>
-<section class="section section_relative flexible" id="materials">
+<section class="section section_relative flexible not_reversed" id="materials">
     <div class="wood"></div>
     <div class="section__content">
         <div class="materials flexible">
-            <span class="materials__header header">Лучшее дерево</span>
+            <span class="materials__header header">Лучшие материалы</span>
             <span class="materials__sub-header">
                 Качество дерева играет решающую роль в создании лестницы. Твердость, фактура, качество обработки и сушки — все эти и многие другие факторы сказываются на качестве итогового продукта.
                 Именно поэтому мы в Proffi Group с особым трепетом и вниманием относимся к качеству дерева и уже более 7 лет работаем с проверенными поставщиками качественной древесины.
@@ -452,6 +500,7 @@
                     </div>
                 </div>
             </div>
+            <div class="team__sub-persons-block flexible">
             <div class="team__sub-persons flexible">
                 <div class="team__persons-item flexible not_marged">
                     <img src="img/team/Photo3.png" alt="" class="team__person-img">
@@ -467,6 +516,8 @@
                         <span class="team__person-speciality">Начальник производства</span>
                     </div>
                 </div>
+            </div>
+            <div class="team__sub-persons flexible">
                 <div class="team__persons-item flexible">
                     <img src="img/team/Photo5.png" alt="" class="team__person-img">
                     <div class="team__person-info">
@@ -474,8 +525,6 @@
                         <span class="team__person-speciality">Менеджер-замерщик</span>
                     </div>
                 </div>
-            </div>
-            <div class="team__sub-persons flexible">
                 <div class="team__persons-item flexible not_marged right-marged">
                     <img src="img/team/Photo6.png" alt="" class="team__person-img">
                     <div class="team__person-info">
@@ -483,6 +532,8 @@
                         <span class="team__person-speciality">Дизайнер-конструктор</span>
                     </div>
                 </div>
+            </div>
+            <div class="team__sub-persons flexible">
                 <div class="team__persons-item flexible">
                     <img src="img/team/Photo8.png" alt="" class="team__person-img">
                     <div class="team__person-info">
@@ -497,6 +548,7 @@
                         <span class="team__person-speciality">Офис-менеджер</span>
                     </div>
                 </div>
+            </div>
             </div>
         </div>
     </div>
@@ -588,17 +640,6 @@
     </div>
 </footer>
 
-<section class="preview-mobile flexible">
-        <div class="preview-mobile__img" style="background-image: url('img/preview/pic 1.png');"></div>
-        <div class="preview-mobile__content flexible">
-            <span class="preview-mobile__header header">Персефона</span>
-            <span class="preview-mobile__description">Ступени изготовлены из дальневосточного дуба.
-            Древесина этого дуба обладает высокой прочностью, долговечностью и красивой текстурой.
-            Перила изготовлены из дальневосточного дуба, а ограждение — кованое. Ковка придаёт ограждению изящный облик и добавляет воздушности.
-        </span>
-            <a class="btn btn_yellow-brd preview-mobile__btn">Назад</a>
-        </div>
-    </section>
 <section class="cases flexible">
     <div class="cases__info cases__position flexible">
         <span class="cases__back-button"><img src="img/opened_cases/buttonBack.png" alt="" class="cases__btn-img"></span>
@@ -612,7 +653,7 @@
         </div>
         <span class="cases__btn btn btn_yellow">ХОЧУ ТАК ЖЕ!</span>
     </div>
-    <div class="cases__image" id="cImage" style="background-image: url(img/opened_cases/pic_3.jpg)">
+    <div class="cases__image" id="cImage">
 
     </div>
 </section>

@@ -1,17 +1,4 @@
 (function($) {
-    if($(window).width() < 767) {
-        $('.projects__preview-item').on('click', function(event){
-            $('body').addClass('cases_open');
-            $('.preview-mobile').addClass('preview-mobile_opened');
-            event.stopImmediatePropagation();
-        });
-    }
-
-    $('.preview-mobile__btn').on('click', function(event){
-        $('body').removeClass('cases_open');
-        $('.preview-mobile').removeClass('preview-mobile_opened');
-        event.stopImmediatePropagation();
-    });
 
     $('.cases__back-button').on('click', function(event){
             $('body').removeClass('cases_open');
