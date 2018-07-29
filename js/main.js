@@ -106,7 +106,20 @@
                 $(markers[3]).removeClass('quiz__active-item_cur');
                 $('.quiz_finally').hide();
                 $('.quiz_1').show();
-                quizClose();
+
+                var items = $('.quiz__active-item_full');
+                var itemsActive = $('.quiz__select_active');
+
+                Array.prototype.forEach.call(itemsActive, function(item){
+                    $(item).removeClass('quiz__select_active');
+                });
+
+                Array.prototype.forEach.call(items, function(item){
+                    $(item).removeClass('quiz__active-item_full');
+                });
+
+                setQuizImage(getImageUrl(['003'],1), 1);
+
                 break;
             default:
                 selectOptions[current - 1] = $('.quiz_' + current + ' .quiz__select_active').data('pic');
