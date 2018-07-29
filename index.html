@@ -27,7 +27,7 @@
 <div class="navbar-mobile__overlay"></div>
 <div class="mobile-header flexible">
     <span class="mobile-header__icon burger"></span>
-    <span class="mobile-header__icon phone"></span>
+    <span class="mobile-header__icon phone"><a href="tel:+7 843 202-34-11"></a></span>
 </div>
 <nav class="flexible navbar navbar_fixed-top">
     <div class="navbar__item navbar__item_left">
@@ -67,8 +67,8 @@
                 <div class="list__item-underline"></div>
             </li>
             <li class="list__item navbar-mobile__contacts">
-                <span class="list__icon phone-Blck"></span>
-                <a class="list__item-link" href="tel:+7 843 202-34-11">+7 843 202-34-11</a>
+                <span class="list__icon whatsApp"></span>
+                <a class="list__item-link" href="https://wa.me/79270390943">+7 843 202-34-11</a>
             </li>
             <li class="list__item navbar-mobile__contacts">
                 <span class="list__icon map_pointer"></span>
@@ -248,9 +248,8 @@
     <div class="section__content">
         <div class="questions flexible">
             <span class="question__header header">Пройди тест</span>
-            <span class="question__header_mobile header">Соберите лестницу своей мечты</span>
-            <span class="question__sub-header">и узнай какая лестница тебе подходит</span>
-            <a class="question__btn btn btn_yellow-brd">НАЧАТЬ ТЕСТ</a>
+            <span class="question__sub-header">и собери лестницу</span>
+            <a class="question__btn btn btn_yellow-brd">НАЧАТЬ</a>
         </div>
     </div>
 </section>
@@ -297,7 +296,7 @@
                     <div class="materials__property">
                         <div class="materials__property-item">
                             <span class="materials__property-name">Твердость</span>
-                            <div class="materials__property-scale scale"><span class="scale__value scale__value_5" id="hardness" data-current="5"></span></div>
+                            <div class="materials__property-scale scale"><span class="scale__value scale__value_4" id="hardness" data-current="5"></span></div>
                         </div>
                         <div class="materials__property-item">
                             <span class="materials__property-name">Фактура</span>
@@ -305,7 +304,7 @@
                         </div>
                         <div class="materials__property-item">
                             <span class="materials__property-name">Цена</span>
-                            <div class="materials__property-scale scale"><span class="scale__value scale__value_3" id="price" data-current="3"></span></div>
+                            <div class="materials__property-scale scale"><span class="scale__value scale__value_4" id="price" data-current="3"></span></div>
                         </div>
                     </div>
                     <div class="materials__description">
@@ -474,6 +473,14 @@
                     компания Proffi Group стала лидером
                     на казанском рынке производства лестниц.
                 </span>
+                <span class="history__info-text">
+                    Однажды один из клиентов попросил Антона и Владимира изготовить лестницу. Несмотря на отсутствие опыта они взялись за заказ.
+                    В ходе работы Антон и Владимир столкнулись со множеством сложностей от выбора древесины до расчёта лестничных конструкций и их подгонки.
+                </span>
+                <span class="history__info-text">
+                    Тогда им стало ясно, что изготовление лестниц — сложный процесс, требующий отлаженного производства.
+                    Спустя пару лет упорной работы Антон и Владимир собрали команду и наладили производственный процесс.
+                </span>
             </div>
         </div>
     </div>
@@ -629,6 +636,28 @@
         </div>
     </div>
 </section>
+<section class="mobile-footer flexible">
+    <div class="mobile-footer__map">
+        <img src="img/contacts/map_mbl.png" alt="" class="mobile-footer__map-img">
+    </div>
+    <img src="img/contacts/logo.png" class="mobile-footer__icon">
+    <span class="mobile-footer__text">г. Казань</span>
+    <span class="mobile-footer__text">ул. Короленко д. 120</span>
+    <ul class="mobile-footer__list iconed-list">
+        <li class="iconed-list__item">
+            <a href="https://vk.com/lestnica_kazan" target="_blank"><img href="https://vk.com/lestnica_kazan" src="img/contacts/vk.svg" class="iconed-list__item-img"></a>
+            <span class="iconed-list__item-text">vk.com/lestnica_kazan</span>
+        </li>
+        <li class="iconed-list__item">
+            <a href="https://facebook.com/proffi_group" target="_blank"><img src="img/contacts/fb.svg" class="iconed-list__item-img"></a>
+            <span class="iconed-list__item-text">facebook.com/lestnici.v.kazani</span>
+        </li>
+        <li class="iconed-list__item">
+            <a href="https://www.instagram.com/lestnici_v_kazani/" target="_blank"><img src="img/contacts/inst.png" class="iconed-list__item-img"></a>
+            <span class="iconed-list__item-text">lestnici_v_kazani</span>
+        </li>
+    </ul>
+</section>
 <footer class="footer section flexible">
     <div class="section__content flexible">
         <div>
@@ -659,12 +688,12 @@
 </section>
 <section class="quiz" data-path="img/quiz_img/">
     <div class="quiz__content flexible">
-        <div class="quiz__content-items quiz__content-items_stretch flexible">
+        <div class="quiz__content-items quiz__content-items_stretch flexible quiz__desktop">
             <div class="quiz__img-block">
                 <img src="img/quiz_img/003.png" alt="" class="quiz__img">
             </div>
         </div>
-        <div class="quiz__content-items quiz__content-items_stretch flexible">
+        <div class="quiz__content-items quiz__content-items_stretch flexible quiz__mobile">
             <div class="quiz__active-block flexible">
                 <span class="quiz__active-item quiz__active-item_cur"></span>
                 <span class="quiz__active-item"></span>
@@ -674,7 +703,10 @@
 
             <div class="quiz__question quiz_1" data-cur="1">
                 <span class="quiz_number">Вопрос 1 из 4</span>
-                <span class="quiz__head">Выберите планировку лестницы:</span>
+                <span class="quiz__head">Выберите планировку:</span>
+                <div class="quiz__img-block">
+                    <img src="img/quiz_img/003.png" alt="" class="quiz__img">
+                </div>
                 <span class="quiz__description">Выбор планировки помогает оптимально расположить лестницу в вашем помемщении</span>
                 <div class="quiz__select-block">
                     <span class="quiz__select" data-kind="Одномаршевая" data-pic="003">Одномаршевая</span>
@@ -689,6 +721,9 @@
             <div class="quiz__question quiz_2" hidden="hidden" data-cur="2">
                 <span class="quiz_number">Вопрос 2 из 4</span>
                 <span class="quiz__head">Выберите материал каркаса:</span>
+                <div class="quiz__img-block">
+                    <img src="img/quiz_img/003.png" alt="" class="quiz__img">
+                </div>
                 <span class="quiz__description">Выбор планировки помогает оптимально расположить лестницу в вашем помемщении</span>
                 <div class="quiz__select-block">
                     <span class="quiz__select" data-kind="Металл" data-pic="ЗМ">Металл</span>
@@ -702,7 +737,10 @@
             </div>
             <div class="quiz__question quiz_3" hidden="hidden" data-cur="3">
                 <span class="quiz_number">Вопрос 3 из 4</span>
-                <span class="quiz__head">Выберите отделку лестницы:</span>
+                <span class="quiz__head">Выберите материал отделки:</span>
+                <div class="quiz__img-block">
+                    <img src="img/quiz_img/003.png" alt="" class="quiz__img">
+                </div>
                 <span class="quiz__description">Выбор планировки помогает оптимально расположить лестницу в вашем помемщении</span>
                 <div class="quiz__select-block">
                     <span class="quiz__select" data-kind="дуб" data-pic="Дуб">Дуб</span>
@@ -717,6 +755,9 @@
             <div class="quiz__question quiz_4" hidden="hidden" data-cur="4">
                 <span class="quiz_number">Вопрос 4 из 4</span>
                 <span class="quiz__head">Выберите тип <br/> ограждения:</span>
+                <div class="quiz__img-block">
+                    <img src="img/quiz_img/003.png" alt="" class="quiz__img">
+                </div>
                 <span class="quiz__description">Выбор планировки помогает оптимально расположить лестницу в вашем помемщении</span>
                 <div class="quiz__select-block">
                     <span class="quiz__select" data-kind="Кованое ограждение" data-pic="Ковка">Кованое ограждение</span>
@@ -730,6 +771,9 @@
             </div>
             <div class="quiz__question quiz_finally" hidden="hidden">
                 <span class="quiz__head">Поздравляем, вы собрали лестницу своей мечты! </span>
+                <div class="quiz__img-block">
+                    <img src="img/quiz_img/003.png" alt="" class="quiz__img">
+                </div>
                 <span class="quiz__description" id="finText">Оставьте заявку, чтобы наши менеджеры обсудили с вами все детали.<br/>
 Если не нашли для себя подходящего варианта свяжитесь и мы поможем!</span>
                 <div class="quiz__select-block">
@@ -737,7 +781,7 @@
                     <input class="quiz__select" id="yourNumber" placeholder="Номер телефона"/>
                 </div>
                 <div class="quiz__button-block flexible" id="btnBlock">
-                    <a class="btn btn_yellow-brd quiz__btn quiz__btn_black" data-page="revert" data-cur="finally">Вернутся</a>
+                    <a class="btn btn_yellow-brd quiz__btn quiz__btn_black" data-page="revert" data-cur="finally">Заново</a>
                     <a class="btn btn_yellow quiz__btn" data-page="send" data-cur="finally">Отправить</a>
                 </div>
             </div>

@@ -92,7 +92,7 @@
                 finishQuiz();
                 break;
             case 'finally':
-                $('.quiz__img').attr('src',getImageUrl(selectOptions,current));
+                setQuizImage(getImageUrl(selectOptions,current), next);
                 $('.quiz_' + current).hide();
                 $('.quiz_' + next).show();
                 var items = $('.quiz__active-item');
@@ -119,7 +119,7 @@
                 if(current > next) {
                     $(markers[current-1]).removeClass('quiz__active-item_cur');
                 } else {
-                    $('.quiz__img').attr('src',getImageUrl(selectOptions,current+1));
+                    setQuizImage(getImageUrl(selectOptions,current+1), current+1);
                     $(markers[current]).addClass('quiz__active-item_cur');
                 }
             break;
@@ -132,7 +132,7 @@
         var selector = $('.quiz_' + current + ' .quiz__select_active');
         e.preventDefault();
         selectOptions[current - 1] = $(this).data('pic');
-        $('.quiz__img').attr('src',getImageUrl(selectOptions,+current));
+        setQuizImage(getImageUrl(selectOptions,+current), current);
         selector.removeClass('quiz__select_active');
         $(this).addClass('quiz__select_active');
 
@@ -145,37 +145,38 @@
 
 
     //  help functions
+    function setQuizImage(url, next) {
+        if($(window).width() < 768) {
+            $('.quiz__mobile .quiz_' + next +' .quiz__img').attr('src',url);
+        } else {
+            $('.quiz__desktop .quiz__img').attr('src',url);
+        }
+    }
 
     function setMaterilaProperties(kind) {
         var properties = [
             {
-                hardness: '5',
+                hardness: '4',
                 texture: '4',
-                price: '3'
-            },
-
-            {
-                hardness: '3',
-                texture: '5',
-                price: '2'
-            },
-
-            {
-                hardness: '1',
-                texture: '3',
                 price: '4'
             },
 
             {
                 hardness: '5',
-                texture: '2',
+                texture: '3',
                 price: '2'
             },
 
             {
-                hardness: '1',
-                texture: '1',
-                price: '5'
+                hardness: '3',
+                texture: '2',
+                price: '1'
+            },
+
+            {
+                hardness: '2',
+                texture: '3',
+                price: '1'
             }
         ];
 
