@@ -253,13 +253,15 @@
         var name = $('#name').val();
         var email = $('#email').val();
         var comment = $('#comment').val();
+        var image = $('#dropZone').data('value');
 
         if(name && (num || email)) {
             send({
                 name: name,
                 number: num,
                 email: email,
-                comment: comment
+                comment: comment,
+                image: image
             }, function(){
                 $('#number').val('');
                 $('#name').val('');

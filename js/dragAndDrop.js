@@ -38,7 +38,8 @@
             var xhr = new XMLHttpRequest();
             xhr.upload.addEventListener('progress', uploadProgress, false);
             xhr.onreadystatechange = stateChange;
-            xhr.open('POST', '/upload.php');
+            xhr.open('POST', 'upload.php');
+            xhr.setRequestHeader('Content-type', 'multipart/form-data;');
             xhr.setRequestHeader('X-FILE-NAME', file.name);
             xhr.send(file);
         };
@@ -51,8 +52,10 @@
         function stateChange(event) {
             if (event.target.readyState == 4) {
                 if (event.target.status == 200) {
+                    dropZone.data('value', event.target.response);
                     dropZoneText.text('Загрузка успешно завершена!');
                 } else {
+                    dropZoneContainer.removeClass('drop');
                     dropZoneText.text('Произошла ошибка!');
                     dropZoneContainer.addClass('error');
                 }

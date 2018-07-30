@@ -2,6 +2,8 @@
 
         $message = 'Клиент заполнил следующее: <br/>';
         $eol = "<br/>";
+        $EOL = "\r\n";
+        $boundary     = "--".md5(uniqid(time()));
         $message .= $eol;
 
         if (isset($_POST['name'])) {
@@ -26,6 +28,24 @@ $subject = "Заявка";
 $headers  = "Content-type: text/html; charset=windows-1251 \r\n";
 $headers .= "From: От кого письмо <from@example.com>\r\n";
 $headers .= "Reply-To: reply-to@example.com\r\n";
+
+
+
+foreach($_FILES["file"]["name"] as $key => $value){
+    $filename = $_FILES["file"]["tmp_name"][$key];
+    $file = fopen($filename, "rb");
+    $data = fread($file,  filesize( $filename ) );
+    fclose($file);
+    $NameFile = $_FILES["file"]["name"][$key]; // в этой переменной надо сформировать имя файла (без всякого пути);
+    $File = $data;
+    $multipart .=  "$EOL--$boundary$EOL";
+    $multipart .= "Content-Type: application/octet-stream; name=\"$NameFile\"$EOL";
+    $multipart .= "Content-Transfer-Encoding: base64$EOL";
+    $multipart .= "Content-Disposition: attachment; filename=\"$NameFile\"$EOL";
+    $multipart .= $EOL; // раздел между заголовками и телом прикрепленного файла
+    $multipart .= chunk_split(base64_encode($File));
+
+}
 
 mail($to, $subject, $message, $headers);
 ?>

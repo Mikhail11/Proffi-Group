@@ -1,91 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Proffi Group</title>
-
-    <script src="js/jquery.min.js"></script>
-    <script src="js/preloader.js"></script>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <!-- Squad theme CSS -->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/style_mobile.css" rel="stylesheet">
-
-</head>
-<body data-path="img/">
-<div id="preloader">
-    <div id="load">
-        <div class="loaderInner"></div>
-    </div>
-</div>
-<div class="navbar-mobile__overlay"></div>
-<div class="mobile-header flexible">
-    <span class="mobile-header__icon burger"></span>
-    <a href="tel:+7 843 202-34-11" class="mobile-header__icon phone"></a>
-</div>
-<nav class="flexible navbar navbar_fixed-top">
-    <div class="navbar__item navbar__item_left">
-        <img src="img/Logo.png"  class="navbar__image">
-    </div>
-    <div class="navbar__item">
-        <ul class="navbar__list list">
-            <li class="list__item navbar-mobile_ylw">
-                <span class="list__icon closed"></span>
-            </li>
-            <li class="list__item">
-                <a class="list__item-link" href="#projects">проекты</a>
-                <div class="list__item-underline"></div>
-            </li>
-            <li class="list__item">
-                <a class="list__item-link" href="#materials">материал</a>
-                <div class="list__item-underline"></div>
-            </li>
-            <li class="list__item">
-                <a class="list__item-link" href="#safety">безопасность</a>
-                <div class="list__item-underline"></div>
-            </li>
-            <li class="list__item">
-                <a class="list__item-link" href="#workflow">процесс</a>
-                <div class="list__item-underline"></div>
-            </li>
-            <li class="list__item">
-                <a class="list__item-link" href="#history">история</a>
-                <div class="list__item-underline"></div>
-            </li>
-            <li class="list__item">
-                <a class="list__item-link" href="#team">команда</a>
-                <div class="list__item-underline"></div>
-            </li>
-            <li class="list__item">
-                <a class="list__item-link" href="#contacts">контакты</a>
-                <div class="list__item-underline"></div>
-            </li>
-            <li class="list__item navbar-mobile__contacts">
-                <span class="list__icon whatsApp"></span>
-                <a class="list__item-link" href="https://wa.me/79270390943">+7 843 202-34-11</a>
-            </li>
-            <li class="list__item navbar-mobile__contacts">
-                <span class="list__icon map_pointer"></span>
-                <a class="list__item-link">ул. Короленко д. 120</a>
-            </li>
-        </ul>
-    </div>
-    <div class="navbar__item navbar__item_right">
-        <a href="tel:+78432023411" class="btn btn_yellow">+7&nbsp;843&nbsp;202-34-11</a>
-    </div>
-</nav>
-<div id="load_content">
 <section class="section flexible section_intro">
     <div class="section__content">
         <div class="intro_mobile flexible">
             <div class="flexible intro__logo-block">
-                <img src="img/Logo.png"  class="intro__img-mobile">
+                <img src="<?= bloginfo('template_directory'); ?>/img/Logo.png"  class="intro__img-mobile">
                 <span class="intro__sub-header-mobile">
                     производство лестниц в Казани
                 </span>
@@ -94,7 +11,7 @@
                 Закажите замер и получите 2 варианта дизайна в подарок!
             </span>
             <a href="#callback" class="intro__button_mobile btn btn_yellow">ЗАКАЗАТЬ</a>
-            <a href="#skills"><img src="img/intro/shewron.png"  class="intro__shewron-mobile"></a>
+            <a href="#skills"><img src="<?= bloginfo('template_directory'); ?>/img/intro/shewron.png"  class="intro__shewron-mobile"></a>
         </div>
     </div>
 </section>
@@ -145,7 +62,7 @@
             </div>
         </div>
         <div class="preview-mobile__img">
-            <img id="mImg" src="img/opened_cases_mbl/pic4.jpg" alt="" width="100%" height="100%">
+            <img id="mImg" src="<?= bloginfo('template_directory'); ?>/img/opened_cases_mbl/pic4.jpg" alt="" width="100%" height="100%">
         </div>
         <div class="preview-mobile__content flexible">
             <div class="preview-mobile__navs flexible">
@@ -193,21 +110,21 @@
             <div class="projects__preview">
                 <div class="projects__row flexible">
                     <div class="projects__preview-item">
-                        <img src="img/preview/pic 1.png" class="projects__preview-img">
+                        <img src="<?= bloginfo('template_directory'); ?>/img/preview/pic 1.png" class="projects__preview-img">
                         <div class="projects__preview-shade">
                             <span class="projects__preview-text">Персефона</span>
                             <a class="projects__preview-btn btn btn_yellow-brd" data-current="0">подробнее</a>
                         </div>
                     </div>
                     <div class="projects__preview-item">
-                        <img src="img/preview/pic 2.png" class="projects__preview-img">
+                        <img src="<?= bloginfo('template_directory'); ?>/img/preview/pic 2.png" class="projects__preview-img">
                         <div class="projects__preview-shade">
                             <span class="projects__preview-text">Дионис</span>
                             <a class="projects__preview-btn btn btn_yellow-brd" data-current="1">подробнее</a>
                         </div>
                     </div>
                     <div class="projects__preview-item">
-                        <img src="img/preview/pic 3.png" class="projects__preview-img">
+                        <img src="<?= bloginfo('template_directory'); ?>/img/preview/pic 3.png" class="projects__preview-img">
                         <div class="projects__preview-shade">
                             <span class="projects__preview-text">Афина</span>
                             <a class="projects__preview-btn btn btn_yellow-brd" data-current="2">подробнее</a>
@@ -216,21 +133,21 @@
                 </div>
                 <div class="projects__row flexible">
                     <div class="projects__preview-item">
-                        <img src="img/preview/pic 4.png" class="projects__preview-img">
+                        <img src="<?= bloginfo('template_directory'); ?>/img/preview/pic 4.png" class="projects__preview-img">
                         <div class="projects__preview-shade">
                             <span class="projects__preview-text">Филарета</span>
                             <a class="projects__preview-btn btn btn_yellow-brd" data-current="3">подробнее</a>
                         </div>
                     </div>
                     <div class="projects__preview-item">
-                        <img src="img/preview/pic 5.png" class="projects__preview-img">
+                        <img src="<?= bloginfo('template_directory'); ?>/img/preview/pic 5.png" class="projects__preview-img">
                         <div class="projects__preview-shade">
                             <span class="projects__preview-text">Эскада</span>
                             <a class="projects__preview-btn btn btn_yellow-brd" data-current="4">подробнее</a>
                         </div>
                     </div>
                     <div class="projects__preview-item">
-                        <img src="img/preview/pic 6.png" class="projects__preview-img">
+                        <img src="<?= bloginfo('template_directory'); ?>/img/preview/pic 6.png" class="projects__preview-img">
                         <div class="projects__preview-shade">
                             <span class="projects__preview-text">Фемида</span>
                             <a class="projects__preview-btn btn btn_yellow-brd" data-current="5">подробнее</a>
@@ -266,22 +183,22 @@
             <div class="materials__selector">
                 <ul class="materials__selector-list list">
                     <li class="list__item link-material list__item_active">
-                        <img src="img/materials/icon_1.png" class="list__item-img">
+                        <img src="<?= bloginfo('template_directory'); ?>/img/materials/icon_1.png" class="list__item-img">
                         <a class="list__item-link" data-kind="0">дуб</a>
                         <div class="list__item-underline list__item-underline_long"></div>
                     </li>
                     <li class="list__item link-material">
-                        <img src="img/materials/icon_2.png" class="list__item-img">
+                        <img src="<?= bloginfo('template_directory'); ?>/img/materials/icon_2.png" class="list__item-img">
                         <a class="list__item-link" data-kind="1">ясень</a>
                         <div class="list__item-underline list__item-underline_long"></div>
                     </li>
                     <li class="list__item link-material">
-                        <img src="img/materials/icon_3.png" class="list__item-img">
+                        <img src="<?= bloginfo('template_directory'); ?>/img/materials/icon_3.png" class="list__item-img">
                         <a class="list__item-link" data-kind="2">береза</a>
                         <div class="list__item-underline list__item-underline_long"></div>
                     </li>
                     <li class="list__item link-material">
-                        <img src="img/materials/icon_4.png" class="list__item-img">
+                        <img src="<?= bloginfo('template_directory'); ?>/img/materials/icon_4.png" class="list__item-img">
                         <a class="list__item-link" data-kind="3">сосна</a>
                         <div class="list__item-underline list__item-underline_long"></div>
                     </li>
@@ -340,20 +257,20 @@
             </div>
             <div class="safety__properties flexible">
                 <div class="safety__properties-item">
-                    <img src="img/safety/icon1.svg" class="safety__properties-img">
+                    <img src="<?= bloginfo('template_directory'); ?>/img/safety/icon1.svg" class="safety__properties-img">
                     <span class="safety__properties-text">
                         Устанавливаем спецальные ворота безопасности для защиты детей от лестницы
                     </span>
                 </div>
                 <div class="safety__properties-item">
-                    <img src="img/safety/icon2.svg" class="safety__properties-img">
+                    <img src="<?= bloginfo('template_directory'); ?>/img/safety/icon2.svg" class="safety__properties-img">
                     <span class="safety__properties-text">
                         Скругляем все острые углы на ступенях
                         и других частях лестницы для смягчения потенциального удара
                     </span>
                 </div>
                 <div class="safety__properties-item">
-                    <img src="img/safety/icon3.svg" class="safety__properties-img">
+                    <img src="<?= bloginfo('template_directory'); ?>/img/safety/icon3.svg" class="safety__properties-img">
                     <span class="safety__properties-text">
                         Рассчитываем расстояние между балясинами так,
                         чтобы ребенок не смог просунть между ними голову
@@ -441,15 +358,15 @@
             </div>
             <div class="logistic-footer__symbols flexible">
                 <div class="logistic-footer__symbols-item">
-                    <img src="img/logistic/icon1.svg" class="logistic-footer__symbols-img icon1">
+                    <img src="<?= bloginfo('template_directory'); ?>/img/logistic/icon1.svg" class="logistic-footer__symbols-img icon1">
                     <span class="logistic-footer__symbols-text">доставка по всему Татарстану</span>
                 </div>
                 <div class="logistic-footer__symbols-item">
-                    <img src="img/logistic/icon2.svg"  class="logistic-footer__symbols-img icon2">
+                    <img src="<?= bloginfo('template_directory'); ?>/img/logistic/icon2.svg"  class="logistic-footer__symbols-img icon2">
                     <span class="logistic-footer__symbols-text">собственная бригада грузчиков</span>
                 </div>
                 <div class="logistic-footer__symbols-item">
-                    <img src="img/logistic/icon3.svg"  class="logistic-footer__symbols-img icon3">
+                    <img src="<?= bloginfo('template_directory'); ?>/img/logistic/icon3.svg"  class="logistic-footer__symbols-img icon3">
                     <span class="logistic-footer__symbols-text">парк фургонов доставки</span>
                 </div>
             </div>
@@ -493,14 +410,14 @@
             </span>
             <div class="team__persons flexible">
                 <div class="team__persons-item flexible not_marged">
-                    <img src="img/team/Photo1.png" alt="" class="team__person-img">
+                    <img src="<?= bloginfo('template_directory'); ?>/img/team/Photo1.png" alt="" class="team__person-img">
                     <div class="team__person-info">
                         <span class="team__person-name">Антон Сергеев</span>
                         <span class="team__person-speciality">Директор Proffi Group</span>
                     </div>
                 </div>
                 <div class="team__persons-item flexible">
-                    <img src="img/team/Photo2.png" alt="" class="team__person-img">
+                    <img src="<?= bloginfo('template_directory'); ?>/img/team/Photo2.png" alt="" class="team__person-img">
                     <div class="team__person-info">
                         <span class="team__person-name">Владимир Красненков</span>
                         <span class="team__person-speciality">Технический директор</span>
@@ -508,54 +425,54 @@
                 </div>
             </div>
             <div class="team__sub-persons-block flexible">
-            <div class="team__sub-persons flexible">
-                <div class="team__persons-item flexible not_marged">
-                    <img src="img/team/Photo3.png" alt="" class="team__person-img">
-                    <div class="team__person-info">
-                        <span class="team__person-name">Ксения Иванова</span>
-                        <span class="team__person-speciality">Директор по качеству</span>
+                <div class="team__sub-persons flexible">
+                    <div class="team__persons-item flexible not_marged">
+                        <img src="<?= bloginfo('template_directory'); ?>/img/team/Photo3.png" alt="" class="team__person-img">
+                        <div class="team__person-info">
+                            <span class="team__person-name">Ксения Иванова</span>
+                            <span class="team__person-speciality">Директор по качеству</span>
+                        </div>
+                    </div>
+                    <div class="team__persons-item flexible">
+                        <img src="<?= bloginfo('template_directory'); ?>/img/team/Photo4.png" alt="" class="team__person-img">
+                        <div class="team__person-info">
+                            <span class="team__person-name">Михаил Суриков</span>
+                            <span class="team__person-speciality">Начальник производства</span>
+                        </div>
                     </div>
                 </div>
-                <div class="team__persons-item flexible">
-                    <img src="img/team/Photo4.png" alt="" class="team__person-img">
-                    <div class="team__person-info">
-                        <span class="team__person-name">Михаил Суриков</span>
-                        <span class="team__person-speciality">Начальник производства</span>
+                <div class="team__sub-persons flexible">
+                    <div class="team__persons-item flexible">
+                        <img src="<?= bloginfo('template_directory'); ?>/img/team/Photo5.png" alt="" class="team__person-img">
+                        <div class="team__person-info">
+                            <span class="team__person-name">Сергей Капчеля</span>
+                            <span class="team__person-speciality">Менеджер-замерщик</span>
+                        </div>
+                    </div>
+                    <div class="team__persons-item flexible not_marged right-marged">
+                        <img src="<?= bloginfo('template_directory'); ?>/img/team/Photo6.png" alt="" class="team__person-img">
+                        <div class="team__person-info">
+                            <span class="team__person-name">Рустам  Галеев</span>
+                            <span class="team__person-speciality">Дизайнер-конструктор</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="team__sub-persons flexible">
-                <div class="team__persons-item flexible">
-                    <img src="img/team/Photo5.png" alt="" class="team__person-img">
-                    <div class="team__person-info">
-                        <span class="team__person-name">Сергей Капчеля</span>
-                        <span class="team__person-speciality">Менеджер-замерщик</span>
+                <div class="team__sub-persons flexible">
+                    <div class="team__persons-item flexible">
+                        <img src="<?= bloginfo('template_directory'); ?>/img/team/Photo8.png" alt="" class="team__person-img">
+                        <div class="team__person-info">
+                            <span class="team__person-name">Леонид Макаров</span>
+                            <span class="team__person-speciality">Ведущий столяр</span>
+                        </div>
+                    </div>
+                    <div class="team__persons-item flexible">
+                        <img src="<?= bloginfo('template_directory'); ?>/img/team/Photo7.png" alt="" class="team__person-img">
+                        <div class="team__person-info">
+                            <span class="team__person-name width-fixed">Снежана  Генералова</span>
+                            <span class="team__person-speciality">Офис-менеджер</span>
+                        </div>
                     </div>
                 </div>
-                <div class="team__persons-item flexible not_marged right-marged">
-                    <img src="img/team/Photo6.png" alt="" class="team__person-img">
-                    <div class="team__person-info">
-                        <span class="team__person-name">Рустам  Галеев</span>
-                        <span class="team__person-speciality">Дизайнер-конструктор</span>
-                    </div>
-                </div>
-            </div>
-            <div class="team__sub-persons flexible">
-                <div class="team__persons-item flexible">
-                    <img src="img/team/Photo8.png" alt="" class="team__person-img">
-                    <div class="team__person-info">
-                        <span class="team__person-name">Леонид Макаров</span>
-                        <span class="team__person-speciality">Ведущий столяр</span>
-                    </div>
-                </div>
-                <div class="team__persons-item flexible">
-                    <img src="img/team/Photo7.png" alt="" class="team__person-img">
-                    <div class="team__person-info">
-                        <span class="team__person-name width-fixed">Снежана  Генералова</span>
-                        <span class="team__person-speciality">Офис-менеджер</span>
-                    </div>
-                </div>
-            </div>
             </div>
         </div>
     </div>
@@ -581,10 +498,10 @@
                     </div>
                     <div class="feedback__content-item feedback__content-item_stretch" id="dropZoneContainer">
                         <form  action="upload.php" style="height:100%;">
-                        <div class="feedback_drag-drop-img flexible" id="dropZone" data-value="">
-                            <img src="img/feedback/icon1.png" alt="" class="feedback__img">
-                            <span class="feedback__text" id="dropZoneText">Если у вас есть фото лестницы, которая вам нравится, перетащите его сюда</span>
-                        </div>
+                            <div class="feedback_drag-drop-img flexible" id="dropZone" data-value="">
+                                <img src="<?= bloginfo('template_directory'); ?>/img/feedback/icon1.png" alt="" class="feedback__img">
+                                <span class="feedback__text" id="dropZoneText">Если у вас есть фото лестницы, которая вам нравится, перетащите его сюда</span>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -603,34 +520,34 @@
                 </div>
             </div>
             <div class="contacts__item">
-                <img src="img/contacts/logo.png" class="contacts__icon">
+                <img src="<?= bloginfo('template_directory'); ?>/img/contacts/logo.png" class="contacts__icon">
                 <ul class="contacts__list iconed-list">
                     <li class="iconed-list__item">
-                        <img src="img/contacts/phone.svg" class="iconed-list__item-img">
+                        <img src="<?= bloginfo('template_directory'); ?>/img/contacts/phone.svg" class="iconed-list__item-img">
                         <span class="iconed-list__item-text">+7 843 202-34-11</span>
                     </li>
                     <li class="iconed-list__item">
-                        <img src="img/contacts/map.svg" class="iconed-list__item-img" style="vertical-align: baseline;">
+                        <img src="<?= bloginfo('template_directory'); ?>/img/contacts/map.svg" class="iconed-list__item-img" style="vertical-align: baseline;">
                         <span class="iconed-list__item-text">г. Казань<br/>
                         ул Короленко д. 120</span>
                     </li>
                     <li class="iconed-list__item">
-                        <img src="img/contacts/mail.svg" class="iconed-list__item-img">
+                        <img src="<?= bloginfo('template_directory'); ?>/img/contacts/mail.svg" class="iconed-list__item-img">
                         <span class="iconed-list__item-text">info@proffigroup.com</span>
                     </li>
                 </ul>
 
                 <ul class="contacts__list iconed-list">
                     <li class="iconed-list__item">
-                        <a href="https://vk.com/lestnica_kazan" target="_blank"><img href="https://vk.com/lestnica_kazan" src="img/contacts/vk.svg" class="iconed-list__item-img"></a>
+                        <a href="https://vk.com/lestnica_kazan" target="_blank"><img href="https://vk.com/lestnica_kazan" src="<?= bloginfo('template_directory'); ?>/img/contacts/vk.svg" class="iconed-list__item-img"></a>
                         <span class="iconed-list__item-text">vk.com/lestnica_kazan</span>
                     </li>
                     <li class="iconed-list__item">
-                        <a href="https://facebook.com/proffi_group" target="_blank"><img src="img/contacts/fb.svg" class="iconed-list__item-img"></a>
+                        <a href="https://facebook.com/proffi_group" target="_blank"><img src="<?= bloginfo('template_directory'); ?>/img/contacts/fb.svg" class="iconed-list__item-img"></a>
                         <span class="iconed-list__item-text">facebook.com/lestnici.v.kazani</span>
                     </li>
                     <li class="iconed-list__item">
-                        <a href="https://www.instagram.com/lestnici_v_kazani/" target="_blank"><img src="img/contacts/inst.png" class="iconed-list__item-img"></a>
+                        <a href="https://www.instagram.com/lestnici_v_kazani/" target="_blank"><img src="<?= bloginfo('template_directory'); ?>/img/contacts/inst.png" class="iconed-list__item-img"></a>
                         <span class="iconed-list__item-text">lestnici_v_kazani</span>
                     </li>
                 </ul>
@@ -640,22 +557,22 @@
 </section>
 <section class="mobile-footer flexible">
     <div class="mobile-footer__map">
-        <img src="img/contacts/map_mbl.png" alt="" class="mobile-footer__map-img">
+        <img src="<?= bloginfo('template_directory'); ?>/img/contacts/map_mbl.png" alt="" class="mobile-footer__map-img">
     </div>
-    <img src="img/contacts/logo.png" class="mobile-footer__icon">
+    <img src="<?= bloginfo('template_directory'); ?>/img/contacts/logo.png" class="mobile-footer__icon">
     <span class="mobile-footer__text">г. Казань</span>
     <span class="mobile-footer__text">ул. Короленко д. 120</span>
     <ul class="mobile-footer__list iconed-list">
         <li class="iconed-list__item">
-            <a href="https://vk.com/lestnica_kazan" target="_blank"><img href="https://vk.com/lestnica_kazan" src="img/contacts/vk.svg" class="iconed-list__item-img"></a>
+            <a href="https://vk.com/lestnica_kazan" target="_blank"><img href="https://vk.com/lestnica_kazan" src="<?= bloginfo('template_directory'); ?>/img/contacts/vk.svg" class="iconed-list__item-img"></a>
             <span class="iconed-list__item-text">vk.com/lestnica_kazan</span>
         </li>
         <li class="iconed-list__item">
-            <a href="https://facebook.com/proffi_group" target="_blank"><img src="img/contacts/fb.svg" class="iconed-list__item-img"></a>
+            <a href="https://facebook.com/proffi_group" target="_blank"><img src="<?= bloginfo('template_directory'); ?>/img/contacts/fb.svg" class="iconed-list__item-img"></a>
             <span class="iconed-list__item-text">facebook.com/lestnici.v.kazani</span>
         </li>
         <li class="iconed-list__item">
-            <a href="https://www.instagram.com/lestnici_v_kazani/" target="_blank"><img src="img/contacts/inst.png" class="iconed-list__item-img"></a>
+            <a href="https://www.instagram.com/lestnici_v_kazani/" target="_blank"><img src="<?= bloginfo('template_directory'); ?>/img/contacts/inst.png" class="iconed-list__item-img"></a>
             <span class="iconed-list__item-text">lestnici_v_kazani</span>
         </li>
     </ul>
@@ -663,7 +580,7 @@
 <footer class="footer section flexible">
     <div class="section__content flexible">
         <div>
-            <img src="img/contacts/logo.png" alt="" class="footer__icon">
+            <img src="<?= bloginfo('template_directory'); ?>/img/contacts/logo.png" alt="" class="footer__icon">
         </div>
         <div>
             <span class="footer__text">Made in Y-studio</span>
@@ -673,7 +590,7 @@
 
 <section class="cases flexible">
     <div class="cases__info cases__position flexible">
-        <span class="cases__back-button"><img src="img/opened_cases/buttonBack.png" alt="" class="cases__btn-img"></span>
+        <span class="cases__back-button"><img src="<?= bloginfo('template_directory'); ?>/img/opened_cases/buttonBack.png" alt="" class="cases__btn-img"></span>
         <div class="flexible cases__position">
             <span class="cases__header header" id="cHeader">Афина</span>
             <span class="cases__description" id="cDescr1">Лестница изготовлена из дуба и покрашена
@@ -688,11 +605,11 @@
 
     </div>
 </section>
-<section class="quiz" data-path="img/quiz_img/">
+<section class="quiz" data-path="<?= bloginfo('template_directory'); ?>/img/quiz_img/">
     <div class="quiz__content flexible">
         <div class="quiz__content-items quiz__content-items_stretch flexible quiz__desktop">
             <div class="quiz__img-block">
-                <img src="img/quiz_img/003.png" alt="" class="quiz__img">
+                <img src="<?= bloginfo('template_directory'); ?>/img/quiz_img/003.png" alt="" class="quiz__img">
             </div>
         </div>
         <div class="quiz__content-items quiz__content-items_stretch flexible quiz__mobile">
@@ -707,7 +624,7 @@
                 <span class="quiz_number">Вопрос 1 из 4</span>
                 <span class="quiz__head">Выберите планировку:</span>
                 <div class="quiz__img-block">
-                    <img src="img/quiz_img/003.png" alt="" class="quiz__img">
+                    <img src="<?= bloginfo('template_directory'); ?>/img/quiz_img/003.png" alt="" class="quiz__img">
                 </div>
                 <span class="quiz__description">Выбор планировки помогает оптимально расположить лестницу в вашем помемщении</span>
                 <div class="quiz__select-block">
@@ -724,7 +641,7 @@
                 <span class="quiz_number">Вопрос 2 из 4</span>
                 <span class="quiz__head">Выберите материал каркаса:</span>
                 <div class="quiz__img-block">
-                    <img src="img/quiz_img/003.png" alt="" class="quiz__img">
+                    <img src="<?= bloginfo('template_directory'); ?>/img/quiz_img/003.png" alt="" class="quiz__img">
                 </div>
                 <span class="quiz__description">Выбор планировки помогает оптимально расположить лестницу в вашем помемщении</span>
                 <div class="quiz__select-block">
@@ -741,7 +658,7 @@
                 <span class="quiz_number">Вопрос 3 из 4</span>
                 <span class="quiz__head">Выберите материал отделки:</span>
                 <div class="quiz__img-block">
-                    <img src="img/quiz_img/003.png" alt="" class="quiz__img">
+                    <img src="<?= bloginfo('template_directory'); ?>/img/quiz_img/003.png" alt="" class="quiz__img">
                 </div>
                 <span class="quiz__description">Выбор планировки помогает оптимально расположить лестницу в вашем помемщении</span>
                 <div class="quiz__select-block">
@@ -758,7 +675,7 @@
                 <span class="quiz_number">Вопрос 4 из 4</span>
                 <span class="quiz__head">Выберите тип <br/> ограждения:</span>
                 <div class="quiz__img-block">
-                    <img src="img/quiz_img/003.png" alt="" class="quiz__img">
+                    <img src="<?= bloginfo('template_directory'); ?>/img/quiz_img/003.png" alt="" class="quiz__img">
                 </div>
                 <span class="quiz__description">Выбор планировки помогает оптимально расположить лестницу в вашем помемщении</span>
                 <div class="quiz__select-block">
@@ -774,7 +691,7 @@
             <div class="quiz__question quiz_finally" hidden="hidden">
                 <span class="quiz__head">Поздравляем, вы собрали лестницу своей мечты! </span>
                 <div class="quiz__img-block">
-                    <img src="img/quiz_img/003.png" alt="" class="quiz__img">
+                    <img src="<?= bloginfo('template_directory'); ?>/img/quiz_img/003.png" alt="" class="quiz__img">
                 </div>
                 <span class="quiz__description" id="finText">Оставьте заявку, чтобы наши менеджеры обсудили с вами все детали.<br/>
 Если не нашли для себя подходящего варианта свяжитесь и мы поможем!</span>
@@ -790,17 +707,3 @@
         </div>
     </div>
 </section>
-</div>
-
-
-<script src="js/jquery.easing.min.js"></script>
-<script src="js/jquery.scrollTo.js"></script>
-
-<!-- Core JavaScript Files -->
-<script src="js/main.js"></script>
-<script src="js/cases.js"></script>
-<script src="js/dragAndDrop.js"></script>
-
-
-</body>
-</html>
