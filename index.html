@@ -27,7 +27,7 @@
 <div class="navbar-mobile__overlay"></div>
 <div class="mobile-header flexible">
     <span class="mobile-header__icon burger"></span>
-    <span class="mobile-header__icon phone"><a href="tel:+7 843 202-34-11"></a></span>
+    <a href="tel:+7 843 202-34-11" class="mobile-header__icon phone"></a>
 </div>
 <nav class="flexible navbar navbar_fixed-top">
     <div class="navbar__item navbar__item_left">
@@ -579,11 +579,13 @@
                             <textarea id="comment" rows="10" class="form__input form__input_textarea" placeholder="Комментарий"></textarea>
                         </form>
                     </div>
-                    <div class="feedback__content-item feedback__content-item_stretch" id="dropZone">
-                        <div class="feedback_drag-drop-img flexible">
+                    <div class="feedback__content-item feedback__content-item_stretch" id="dropZoneContainer">
+                        <form action="/upload.php" style="height:100%;">
+                        <div class="feedback_drag-drop-img flexible" id="dropZone">
                             <img src="img/feedback/icon1.png" alt="" class="feedback__img">
-                            <span class="feedback__text">Если у вас есть фото лестницы, которая вам нравится, перетащите его сюда</span>
+                            <span class="feedback__text" id="dropZoneText">Если у вас есть фото лестницы, которая вам нравится, перетащите его сюда</span>
                         </div>
+                        </form>
                     </div>
                 </div>
                 <a class="btn btn_yellow feedback__button">ОТПРАВИТЬ</a>
@@ -797,6 +799,7 @@
 <!-- Core JavaScript Files -->
 <script src="js/main.js"></script>
 <script src="js/cases.js"></script>
+<script src="js/dragAndDrop.js"></script>
 
 <!-- Drag and Drop upload -->
 <script src="js/upload.js"></script>

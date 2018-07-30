@@ -1817,3 +1817,21 @@ a:focus {
 .next::before {
     content: '›';
 }
+
+
+/*  dropzone*/
+
+#dropZoneContainer.hover {
+    background: #ddd;
+    border-color: #aaa;
+}
+
+#dropZoneContainer.error {
+    background: #faa;
+    border-color: #f00;
+}
+
+#dropZoneContainer.drop {
+    background: #afa;
+    border-color: #0f0;
+}
