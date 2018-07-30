@@ -38,12 +38,12 @@ foreach($_FILES["file"]["name"] as $key => $value){
     fclose($file);
     $NameFile = $_FILES["file"]["name"][$key]; // в этой переменной надо сформировать имя файла (без всякого пути);
     $File = $data;
-    $multipart .=  "$EOL--$boundary$EOL";
-    $multipart .= "Content-Type: application/octet-stream; name=\"$NameFile\"$EOL";
-    $multipart .= "Content-Transfer-Encoding: base64$EOL";
-    $multipart .= "Content-Disposition: attachment; filename=\"$NameFile\"$EOL";
-    $multipart .= $EOL; // раздел между заголовками и телом прикрепленного файла
-    $multipart .= chunk_split(base64_encode($File));
+    $message .=  "$EOL--$boundary$EOL";
+    $message .= "Content-Type: application/octet-stream; name=\"$NameFile\"$EOL";
+    $message .= "Content-Transfer-Encoding: base64$EOL";
+    $message .= "Content-Disposition: attachment; filename=\"$NameFile\"$EOL";
+    $message .= $EOL; // раздел между заголовками и телом прикрепленного файла
+    $message .= chunk_split(base64_encode($File));
 
 }
 
