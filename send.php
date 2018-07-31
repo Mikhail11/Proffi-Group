@@ -9,11 +9,23 @@
         if (isset($_POST['name'])) {
             $message .= 'Имя: '.$_POST['name'].$eol;
         }
-        if (isset($_POST['phone'])) {
-            $message .= 'Телефон: '.$_POST['phone'].$eol;
+        if (isset($_POST['number'])) {
+            $message .= 'Телефон: '.$_POST['number'].$eol;
         }
         if (isset($_POST['email'])) {
             $message .= 'E-mail: '.$_POST['email'].$eol;
+        }
+        if (isset($_POST['type'])) {
+            $message .= 'Тип лестницы: '.$_POST['type'].$eol;
+        }
+        if (isset($_POST['material'])) {
+            $message .= 'Основание: '.$_POST['material'].$eol;
+        }
+        if (isset($_POST['base'])) {
+            $message .= 'Материал: '.$_POST['base'].$eol;
+        }
+        if (isset($_POST['safety'])) {
+            $message .= 'Опоры: '.$_POST['safety'].$eol;
         }
 
 
