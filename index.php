@@ -1,3 +1,5 @@
+<?php get_header(); ?>
+<?php query_posts('post_type=page');  while ( have_posts() ) : the_post(); ?>
 <section class="section flexible section_intro">
     <div class="section__content">
         <div class="intro_mobile flexible">
@@ -496,8 +498,8 @@
                             <textarea id="comment" rows="10" class="form__input form__input_textarea" placeholder="Комментарий"></textarea>
                         </form>
                     </div>
-                    <div class="feedback__content-item feedback__content-item_stretch" id="dropZoneContainer">
-                        <form  action="upload.php" style="height:100%;">
+                    <div class="feedback__content-item feedback__content-item_stretch" id="dropZoneContainer"  data-path="<?= bloginfo('template_directory'); ?>/">
+                        <form  action="<?= bloginfo('template_directory'); ?>/upload.php" style="height:100%;">
                             <div class="feedback_drag-drop-img flexible" id="dropZone" data-value="">
                                 <img src="<?= bloginfo('template_directory'); ?>/img/feedback/icon1.png" alt="" class="feedback__img">
                                 <span class="feedback__text" id="dropZoneText">Если у вас есть фото лестницы, которая вам нравится, перетащите его сюда</span>
@@ -707,3 +709,5 @@
         </div>
     </div>
 </section>
+<?php endwhile; // end of the loop. ?>
+<?php get_footer(); ?>

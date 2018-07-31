@@ -7,20 +7,19 @@
         $message .= $eol;
 
         if (isset($_POST['name'])) {
-            $message .= 'Имя: '.$_POST['name'];
+            $message .= 'Имя: '.$_POST['name'].$eol;
         }
         if (isset($_POST['phone'])) {
-            $message .= 'Телефон: '.$_POST['phone'];
+            $message .= 'Телефон: '.$_POST['phone'].$eol;
         }
         if (isset($_POST['email'])) {
-            $message .= 'E-mail: '.$_POST['email'];
+            $message .= 'E-mail: '.$_POST['email'].$eol;
         }
-$message .= $eol.stripslashes($message).$eol;
 
 
 
 
-$to  = "<stairs116@gmail.com>, " ;
+$to  = "<stairs116@gmail.com> " ;
 
 $subject = "Заявка";
 

@@ -131,6 +131,7 @@
                 $('.quiz_' + next).show();
                 if(current > next) {
                     $(markers[current-1]).removeClass('quiz__active-item_cur');
+                    setQuizImage(getImageUrl(selectOptions,current-1), current-1);
                 } else {
                     setQuizImage(getImageUrl(selectOptions,current+1), current+1);
                     $(markers[current]).addClass('quiz__active-item_cur');
@@ -277,7 +278,7 @@
     }
 
     function send(obj, callback, error) {
-        var path =  $('body').data('path');
+        var path =  $('#dropZoneContainer').data('path');
         $.ajax({
             url: path + 'send.php',
             method: 'POST',
