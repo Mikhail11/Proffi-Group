@@ -592,7 +592,7 @@
 
 <section class="cases flexible">
     <div class="cases__info cases__position flexible">
-        <span class="cases__back-button"><img src="<?= bloginfo('template_directory'); ?>/img/opened_cases/buttonBack.png" alt="" class="cases__btn-img"></span>
+        <span class="cases__back-button">НАЗАД</span>
         <div class="flexible cases__position">
             <span class="cases__header header" id="cHeader">Афина</span>
             <span class="cases__description" id="cDescr1">Лестница изготовлена из дуба и покрашена

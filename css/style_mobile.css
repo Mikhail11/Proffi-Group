@@ -16,6 +16,16 @@
     .navbar__list {
         width:88rem;
     }
+
+    .icon3 {
+        width:7rem;
+        margin: 0 auto 2rem;
+    }
+
+    .logistic-footer__symbols {
+        padding: 0 17rem 0 7rem;
+        width: 70%;
+    }
 }
 
 @media (max-width: 1600px) {
